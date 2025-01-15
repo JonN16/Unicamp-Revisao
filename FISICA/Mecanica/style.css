@@ -19,12 +19,13 @@ body {
     margin-top: 20px;
 }
 
+/* Box */
 .box {
     margin: 20px 0;
     padding: 15px;
     background: #ffe3bc;
     border-left: 5px solid #cc8a2e;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 .box h3 {
     margin: 5px 0;
