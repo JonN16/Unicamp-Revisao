@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecologia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ecologia</h1>
+
+        <h2>Conceitos Básicos</h2>
+        <div class="box">
+            <h3>Espécime: indivíduo</h3>
+            <h3>População: conjunto de indivíduos da mesma espécie no mesmo local e tempo</h3>
+            <h3>Comunidade: conjunto de populações de espécies diferentes no mesmo local e tempo</h3>
+            <h3>Ecossistema: conjunto de comunidades e fatores abióticos no mesmo local e tempo</h3>
+        </div>
+
+        <div class="box">
+            <h3>Habitat: "casa" de uma espécie</h3>
+            <h3>Nicho Ecológico: estudo do comportamento de uma espécie em seu habitat</h3>
+        </div>
+
+        <h2>Dinâmica Populacional</h2>
+        <div class="box">
+            <h3>Densidade populacional: Número de indivíduos dividido pela área ou volume</h3>
+            <h3>Natalidade: número de nascimentos</h3>
+            <h3>Mortalidade: número de mortes</h3>
+            <h3>Imigração: entrada de indivíduos</h3>
+            <h3>Emigração: saída de indivíduos</h3>
+            <h3>Crescimento absoluto: (Nº final - Nº inicial) / Tempo</h3>
+            <h3>Crescimento relativo: Crescimento absoluto / Nº inicial</h3>
+        </div>
+
+        <h2>Curva de Crescimento Populacional</h2>
+        <canvas id="growthChart" width="400" height="200"></canvas>
+
+        <div class="box">
+            <h3>Potencial Biótico: ambiente ideal para o crescimento populacional</h3>
+            <h3>Resistência Relativa: fatores que limitam o crescimento da população</h3>
+            <h3>Crescimento Real: crescimento da população em um ambiente real</h3>
+            <h3>Carga Biótica Máxima: número máximo de indivíduos que um ambiente pode suportar</h3>
+        </div>
+
+        <h2>Cadeias e Teias Alimentares</h2>
+        <div class="box">
+            <h3>Cadeia Alimentar: sequência de seres vivos em que um serve de alimento para outro</h3>
+            <h3>Teia Alimentar: interligação de várias cadeias alimentares</h3>
+            <h3>Fluxo de Energia: unidirecional</h3>
+        </div>
+
+        <img src="img/cadeia_alimentar.png" alt="Cadeia Alimentar" class="center">
+
+        <div class="box">
+            <h3>Produtores: seres que produzem seu próprio alimento, como plantas, bactérias e algas</h3>
+            <h3>Consumidor Primário: animais herbívoros</h3>
+            <h3>Consumidores Secundário, Terciário, etc.: animais carnívoros</h3>
+            <h3>Decompositores: transformam matéria orgânica em nutrientes para os produtores</h3>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('growthChart').getContext('2d');
+        const growthChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                datasets: [
+                    {
+                        label: 'Potencial Biótico',
+                        data: [0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 2,
+                        fill: false
+                    },
+                    {
+                        label: 'Crescimento Real',
+                        data: [0, 1.5, 3, 6, 12, 24, 48, 96, 192, 384, 768],
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 2,
+                        fill: false
+                    },
+                    {
+                        label: 'Carga Biótica Máxima',
+                        data: [500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500],
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Tempo'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'População'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
