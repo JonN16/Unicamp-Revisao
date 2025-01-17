@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potencialização</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>POTENCIALIZAÇÃO</h1>
+        
+        <div class="box">
+            <h2>1. Introdução</h2>
+            <p>Potencialização é uma operação matemática que consiste em multiplicar um número por ele mesmo várias vezes.</p>
+            <p>É como se fosse uma multiplicação repetida.</p>
+            <code>
+                2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 = 2 * 2 * 2 * 2 = 16 = 2<sup>8</sup>
+            </code>
+        </div>
+
+        <div class="box">
+            <h2>2. Propriedades</h2>
+            <ul>
+                <li><strong>Produto de Potências de Mesma Base:</strong> Para multiplicar potências de mesma base, mantém-se a base e soma-se os expoentes.</li>
+                <code>
+                    x<sup>m</sup> * x<sup>n</sup> = x<sup>m+n</sup>
+                </code>
+                <li><strong>Quociente de Potências de Mesma Base:</strong> Para dividir potências de mesma base, mantém-se a base e subtrai-se os expoentes.</li>
+                <code>
+                    x<sup>m</sup> / x<sup>n</sup> = x<sup>m-n</sup>
+                </code>
+                <li><strong>Potência de Potência:</strong> Para elevar uma potência a outra potência, mantém-se a base e multiplica-se os expoentes.</li>
+                <code>
+                    (x<sup>m</sup>)<sup>n</sup> = x<sup>m*n</sup>
+                </code>
+                <li><strong>Potência de um Produto:</strong> Para elevar um produto a uma potência, eleva-se cada fator da base à potência indicada.</li>
+                <code>
+                    (xy)<sup>n</sup> = x<sup>n</sup> * y<sup>n</sup>
+                </code>
+                <li><strong>Potência de um Quociente:</strong> Para elevar um quociente a uma potência, eleva-se o numerador e o denominador à potência indicada.</li>
+                <code>
+                    (x/y)<sup>n</sup> = x<sup>n</sup> / y<sup>n</sup>
+                </code>
+                <li><strong>Base Negativa com Expoente Par ou Ímpar:</strong> Se a base for negativa e o expoente for par, o resultado será positivo. Se a base for negativa e o expoente for ímpar, o resultado será negativo.</li>
+                <code>
+                    (-x)<sup>n</sup> = 
+                    <ul>
+                    <li>Se n for par: (-x)<sup>n</sup> = x<sup>n</sup></li>
+                    <li>Se n for ímpar: (-x)<sup>n</sup> = -x<sup>n</sup></li>
+                    </ul>
+                </code>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>3. Propriedades Negativas</h2>
+            <ul>
+                <li><strong>Potência de Expoente Negativo:</strong> Para elevar um número a um expoente negativo, inverte-se a base e troca-se o sinal do expoente.</li>
+                <code>
+                    x<sup>-n</sup> = 1 / x<sup>n</sup>
+                </code>
+                <li><strong>Fração de Expoente Negativo:</strong> Para elevar uma fração a um expoente negativo, inverte-se a fração e troca-se o sinal do expoente.</li>
+                <code>
+                    (x/y)<sup>-n</sup> = (y/x)<sup>n</sup>
+                </code>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>4. Radiação</h2>
+            <p>Radiciação é a operação inversa da potenciação. Ela extrai a raiz de um número elevado a um expoente.</p>
+            <ul>
+                <li><strong>Raiz Quadrada:</strong> A raiz quadrada de um número é o valor que, multiplicado por si mesmo, resulta no número original.</li>
+                <code>
+                    √x = y → y * y = x
+                </code>
+                <li><strong>Raiz Cúbica:</strong> A raiz cúbica de um número é o valor que, multiplicado por si mesmo três vezes, resulta no número original.</li>
+                <code>
+                    ³√x = y → y * y * y = x
+                </code>
+                <li>e por ai continua...</li>
+                <li><strong>Potência com Expoente Fracionário:</strong> Uma potência com expoente fracionário pode ser expressa como uma raiz. Por exemplo:</li>
+                <code>
+                    a<sup>2/3</sup> = (³√a)<sup>2</sup>
+                </code>
+                <li><strong>Produto de Radicais:</strong> A multiplicação de raízes pode ser simplificada multiplicando os radicandos.</li>
+                <code>
+                    √x * √y = √(x * y)
+                </code>
+                <li><strong>Raiz por Potência:</strong> A raiz de uma potência pode ser simplificada elevando o radicando ao expoente dividido pelo índice da raiz.</li>
+                <code>
+                    (³√x)<sup>2</sup> = (x<sup>1/3</sup>)<sup>2</sup> = x<sup>2/3</sup>
+                </code>
+                <li><strong>Raiz de Frações:</strong> A raiz de uma fração pode ser expressa como a raiz do numerador dividida pela raiz do denominador.</li>
+                <code>
+                    ³√(2/3) = ³√2 / ³√3
+                </code>
+                <li><strong>Simplificação de Raízes:</strong> A raiz com uma potencia pode simplicar a potencia e a raiz</li>
+                <code>
+                         ⁶√(3<sup>4</sup>) = ³√(3<sup>2</sup>)
+                </code>
+                <li><strong>Radiciação de Radiciação:</strong> A raiz de uma raiz pode ser simplificada multiplicando os expoentes fracionários.</li>
+                <code>
+                    √(√x) = x<sup>1/4</sup>
+                </code>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>MMC para Calcular Valor de Raízes</h2>
+            <p>Para calcular o valor de raízes, é necessário encontrar o mínimo múltiplo comum (MMC) dos expoentes.</p>
+            <p>Por exemplo, para calcular a raiz quadrada de 800:</p>
+            <div class style="justify-content: center; width: 100%; text-align: center;background-color: #f5f5f5;">
+            <div class="mmc-container" style="justify-content: center;">
+                <div class="divider"></div>
+                <div class="mmc-row">
+                    <span class="mmc-number">800</span>
+                    <span class="factor">2</span>
+                </div>
+                <div class="mmc-row">
+                    <span class="mmc-number">400</span>
+                    <span class="factor">2</span>
+                </div>
+                <div class="mmc-row">
+                    <span class="mmc-number">200</span>
+                    <span class="factor">2</span>
+                </div>
+                <div class="mmc-row">
+                    <span class="mmc-number">100</span>
+                    <span class="factor">2</span>
+                </div>
+                <div class="mmc-row">
+                    <span class="mmc-number">50</span>
+                    <span class="factor">2</span>
+                </div>
+                <div class="mmc-row">
+                    <span class="mmc-number">25</span>
+                    <span class="factor">5</span>
+                </div>
+                <div class="mmc-row">
+                    <span class="mmc-number">5</span>
+                    <span class="factor">5</span>
+                </div>
+                <div class="mmc-row">
+                    <span class="mmc-number">1</span>
+                </div>
+            </div>
+        </div>
+            <p>Portanto, a raiz quadrada de 800 é:</p>
+            <code>
+            √800 = √(2<sup>5</sup> * 5<sup>2</sup>) = 2<sup>2</sup> * 5 * √2 = 20√2
+            </code>
+        </div>
+
+        <div class="box">
+            <h2>Exemplos</h2>
+            <h3>Exemplo 1</h3>
+            <p>Calcule o valor de 2<sup>5</sup>.</p>
+            <code>
+                2<sup>5</sup> = 2 * 2 * 2 * 2 * 2 = 32
+            </code>
+            <h3>Exemplo 2</h3>
+            <p>Calcule o valor de (3 * 4)<sup>2</sup>.</p>
+            <code>
+                (3 * 4)<sup>2</sup> = 12<sup>2</sup> = 144
+            </code>
+            <h3>Exemplo 3</h3>
+            <p>Calcule o valor de 5<sup>3</sup> / 5<sup>2</sup>.</p>
+            <code>
+                <sup>5<sup>3</sup></sup>&frasl;<sub>5<sup>2</sup></sub> = 5 * 5 * 5 / 5 * 5 = 5
+            </code>
+            <h3>Exemplo 4</h3>
+            <p>Calcule o valor de (2<sup>3</sup>)<sup>2</sup>.</p>
+            <code>
+                (2<sup>3</sup>)<sup>2</sup> = 2<sup>3*2</sup> = 2<sup>6</sup> = 64
+            </code>
+            <h3>Exemplo 5</h3>
+            <p>Calcule o valor de (3/4)<sup>2</sup>.</p>
+            <code>
+                (3/4)<sup>2</sup> = 3<sup>2</sup> / 4<sup>2</sup> = 9/16
+            </code>
+        </div>
+
+        <div class="box questions">
+            <h2>Exercícios e Respostas</h2>
+
+            <h3>1. Calcule o valor de 4<sup>3</sup>.</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    4<sup>3</sup> = 4 * 4 * 4 = 64
+                </code>
+                <p>Multiplicamos 4 por ele mesmo três vezes.</p>
+            </details>
+
+            <h3>2. Calcule o valor de (5 * 2)<sup>3</sup>.</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    (5 * 2)<sup>3</sup> = 10<sup>3</sup> = 1000
+                </code>
+                <p>Primeiro multiplicamos 5 por 2 para obter 10, depois elevamos 10 ao cubo.</p>
+            </details>
+
+            <h3>3. Calcule o valor de 7<sup>2</sup> / 7<sup>1</sup>.</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    7<sup>2</sup> / 7<sup>1</sup> = 7<sup>2-1</sup> = 7<sup>1</sup> = 7
+                </code>
+                <p>Subtraímos os expoentes porque as bases são iguais.</p>
+            </details>
+
+            <h3>4. Calcule o valor de (6<sup>2</sup>)<sup>3</sup>.</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    (6<sup>2</sup>)<sup>3</sup> = 6<sup>2*3</sup> = 6<sup>6</sup> = 46656
+                </code>
+                <p>Multiplicamos os expoentes porque estamos elevando uma potência a outra potência.</p>
+            </details>
+
+            <h3>5. Calcule o valor de (1/2)<sup>4</sup>.</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    (1/2)<sup>4</sup> = 1<sup>4</sup> / 2<sup>4</sup> = 1 / 16
+                </code>
+                <p>Elevamos tanto o numerador quanto o denominador ao expoente 4.</p>
+            </details>
+
+            <h3>6. Simplifique a expressão (2<sup>3</sup> * 4<sup>2</sup>) / (8<sup>2</sup>).</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    (2<sup>3</sup> * 4<sup>2</sup>) / (8<sup>2</sup>) = (2<sup>3</sup> * (2<sup>2</sup>)<sup>2</sup>) / (2<sup>3</sup>)<sup>2</sup><br>
+                    = (2<sup>3</sup> * 2<sup>4</sup>) / 2<sup>6</sup><br>
+                    = 2<sup>7</sup> / 2<sup>6</sup><br>
+                    = 2<sup>7-6</sup><br>
+                    = 2<sup>1</sup><br>
+                    = 2
+                </code>
+                <p>Convertendo todas as bases para 2, podemos simplificar a expressão subtraindo os expoentes.</p>
+            </details>
+
+            <h3>7. Calcule o valor de (3<sup>2</sup> * 9<sup>3</sup>) / (27<sup>2</sup>).</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    (3<sup>2</sup> * 9<sup>3</sup>) / (27<sup>2</sup>) = (3<sup>2</sup> * (3<sup>2</sup>)<sup>3</sup>) / (3<sup>3</sup>)<sup>2</sup><br>
+                    = (3<sup>2</sup> * 3<sup>6</sup>) / 3<sup>6</sup><br>
+                    = 3<sup>8</sup> / 3<sup>6</sup><br>
+                    = 3<sup>8-6</sup><br>
+                    = 3<sup>2</sup><br>
+                    = 9
+                </code>
+                <p>Convertendo todas as bases para 3, podemos simplificar a expressão subtraindo os expoentes.</p>
+            </details>
+
+            <h3>8. Simplifique a expressão (5<sup>3</sup> * 25<sup>2</sup>) / (125<sup>2</sup>).</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    (5<sup>3</sup> * 25<sup>2</sup>) / (125<sup>2</sup>) = (5<sup>3</sup> * (5<sup>2</sup>)<sup>2</sup>) / (5<sup>3</sup>)<sup>2</sup><br>
+                    = (5<sup>3</sup> * 5<sup>4</sup>) / 5<sup>6</sup><br>
+                    = 5<sup>7</sup> / 5<sup>6</sup><br>
+                    = 5<sup>7-6</sup><br>
+                    = 5<sup>1</sup><br>
+                    = 5
+                </code>
+                <p>Convertendo todas as bases para 5, podemos simplificar a expressão subtraindo os expoentes.</p>
+            </details>
+
+            <h3>9. Calcule o valor de (2<sup>4</sup> * 16<sup>3</sup>) / (32<sup>2</sup>).</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    (2<sup>4</sup> * 16<sup>3</sup>) / (32<sup>2</sup>) = (2<sup>4</sup> * (2<sup>4</sup>)<sup>3</sup>) / (2<sup>5</sup>)<sup>2</sup><br>
+                    = (2<sup>4</sup> * 2<sup>12</sup>) / 2<sup>10</sup><br>
+                    = 2<sup>16</sup> / 2<sup>10</sup><br>
+                    = 2<sup>16-10</sup><br>
+                    = 2<sup>6</sup><br>
+                    = 64
+                </code>
+                <p>Convertendo todas as bases para 2, podemos simplificar a expressão subtraindo os expoentes.</p>
+            </details>
+
+            <h3>10. Simplifique a expressão (7<sup>2</sup> * 49<sup>3</sup>) / (343<sup>2</sup>).</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    (7<sup>2</sup> * 49<sup>3</sup>) / (343<sup>2</sup>) = (7<sup>2</sup> * (7<sup>2</sup>)<sup>3</sup>) / (7<sup>3</sup>)<sup>2</sup><br>
+                    = (7<sup>2</sup> * 7<sup>6</sup>) / 7<sup>6</sup><br>
+                    = 7<sup>8</sup> / 7<sup>6</sup><br>
+                    = 7<sup>8-6</sup><br>
+                    = 7<sup>2</sup><br>
+                    = 49
+                </code>
+                <p>Convertendo todas as bases para 7, podemos simplificar a expressão subtraindo os expoentes.</p>
+            </details>
+        </div>
+    </div>
+</body>
+</html>
