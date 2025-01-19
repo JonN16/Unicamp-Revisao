@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Função 1º Grau</title>
+  <link rel="stylesheet" href="CSS_MATEMATICA/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Função 1º Grau</h1>
+
+    <!-- Introdução -->
+    <div class="box">
+      <h2>1. O que é uma Função 1º Grau?</h2>
+      <p>Uma função de 1º grau é uma relação matemática onde a variável dependente (geralmente "y" ou "f(x)") varia de
+        forma linear com a variável independente (geralmente "x"). Sua fórmula geral é:</p>
+      <code>f(x) = ax + b ou Y = ax + b</code>
+      <p>Em outras palavras, a função descreve uma reta no gráfico cartesiano. Essa reta pode ser crescente ou
+        decrescente, dependendo do valor do coeficiente <strong>a</strong>.</p>
+      <p>Vamos entender o que cada parte dessa equação significa:</p>
+      <ul>
+        <li><strong>x:</strong> Variável independente. Você pode escolher qualquer valor para <strong>x</strong> e
+          calcular o valor de <strong>f(x)</strong> ou <strong>y</strong>.</li>
+        <li><strong>f(x) ou y:</strong> Variável dependente. O valor de <strong>f(x)</strong> depende do valor de
+          <strong>x</strong>.</li>
+        <li><strong>a:</strong> Coeficiente angular da reta. Ele determina a inclinação da reta. Se <strong>a >
+            0</strong>, a reta será crescente, e se <strong>a < 0</strong>, a reta será decrescente.</li>
+        <li><strong>b:</strong> Coeficiente linear. Este valor determina onde a reta corta o eixo <strong>y</strong> (o
+          ponto de interceptação).</li>
+      </ul>
+    </div>
+
+    <!-- Diagrama de Funções -->
+    <div class="box">
+      <h2>2. Funções: Exemplos Visuais</h2>
+      <p>A seguir, temos dois exemplos de funções: uma que é de fato uma função e outra que não é. Para que uma relação
+        seja considerada uma função, cada valor do domínio (conjunto de entrada) deve ter um único valor correspondente
+        no contradomínio (conjunto de saída).</p>
+      <div class="diagram-container">
+        <div class="column">
+          <h3>Função</h3>
+          <div class="pair"><span>1</span> → <span>5</span></div>
+          <div class="pair"><span>2</span> → <span>10</span></div>
+          <div class="pair"><span>3</span> → <span>15</span></div>
+          <div class="pair"><span>4</span> → <span>20</span></div>
+          <div class="pair"><span>5</span> → <span>25</span></div>
+          <div class="pair"><span>6</span> → <span>30</span></div>
+        </div>
+        <div class="column">
+          <h3>Não é Função</h3>
+          <div class="pair invalid"><span>0</span> → <span>2</span></div>
+          <div class="pair invalid"><span>0</span> → <span>3</span></div>
+          <div class="pair invalid"><span>0</span> → <span>4</span></div>
+          <div class="pair invalid"><span>4</span> → <span>5</span></div>
+          <div class="pair invalid"><span>4</span> → <span>4</span></div>
+          <div class="pair invalid"><span>4</span> → <span>3</span></div>
+        </div>
+      </div>
+      <p class="note">Nota: Em uma função válida, não pode haver dois valores de <strong>x</strong> que levem ao mesmo
+        valor de <strong>y</strong>.</p>
+    </div>
+
+    <!-- Gráficos de Funções -->
+    <div class="box">
+      <h2>3. Gráficos de Funções</h2>
+      <h3>Função Crescente (a > 0)</h3>
+      <p>Quando o coeficiente <strong>a</strong> é positivo, a função é crescente, ou seja, à medida que
+        <strong>x</strong> aumenta, <strong>f(x)</strong> também aumenta.</p>
+
+      <div class="chart-container">
+          <canvas id="growthChart"></canvas>
+      </div>
+
+      <h3>Função Decrescente (a < 0)</h3>
+          <p>Quando o coeficiente <strong>a</strong> é negativo, a função é decrescente. Isso significa que à medida que
+            <strong>x</strong> aumenta, <strong>f(x)</strong> diminui.</p>
+
+          <div class="chart-container">
+            <canvas id="declineChart"></canvas>
+          </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Função para criar gráficos
+              function createChart(chartId, chartLabel, chartData, chartBorderColor, xAxisTitle, yAxisTitle) {
+                const ctx = document.getElementById(chartId).getContext('2d');
+                new Chart(ctx, {
+                  type: 'line',
+                  data: {
+                    labels: chartData.labels,
+                    datasets: [{
+                      label: chartLabel,
+                      data: chartData.data,
+                      borderColor: chartBorderColor,
+                      borderWidth: 2,
+                      fill: false,
+                    }]
+                  },
+                  options: {
+                    responsive: true,
+                    plugins: {
+                      title: {
+                        display: true,
+                        text: chartLabel
+                      }
+                    },
+                    scales: {
+                      x: {
+                        title: {
+                          display: true,
+                          text: xAxisTitle
+                        },
+                        grid: {
+                          color: 'rgba(200, 200, 200, 0.2)',
+                          lineWidth: 1
+                        }
+                      },
+                      y: {
+                        title: {
+                          display: true,
+                          text: yAxisTitle
+                        },
+                        grid: {
+                          color: 'rgba(200, 200, 200, 0.2)',
+                          lineWidth: 1
+                        }
+                      }
+                    }
+                  }
+                });
+              }
+      
+              // Dados do gráfico da Função Crescente
+              const growthData = {
+                labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                data: [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+              };
+      
+              // Criando o gráfico da Função Crescente
+              createChart('growthChart', 'Função Crescente (a = 1, b = -3)', growthData, 'rgba(75, 192, 192, 1)', 'Valor de X', 'Valor de f(x) ou Y');
+      
+              // Dados do gráfico da Função Decrescente
+              const declineData = {
+                labels: ['5', '6', '7', '8', '9', '10', '11'],
+                data: [5, 4, 3, 2, 1, 0, -1]
+              };
+      
+              // Criando o gráfico da Função Decrescente
+              createChart('declineChart', 'Função Decrescente (a = -1, b = 5)', declineData, 'rgba(255, 99, 132, 1)', 'Valor de X', 'Valor de f(x) ou Y');
+      
+              const Pergunta1 = {
+                labels: ['0', '100', '200', '300', '400', '500'],
+                data: [50, 40, 30, 20, 10, 0]
+              };
+      
+              // Criando o gráfico da Pergunta1
+              createChart('GraficoPergunta1', 'Pergunta1', Pergunta1, 'green', 'Distância Percorrida (km)', 'Quantidade de Combustível (L)');
+
+              // Dados do gráfico da Pergunta2
+              const Pergunta2 = {
+                labels: ['0', '2', '4', '6', '8', '10'],
+                data: [100, 200, 400, 800, 1600, 3200]
+              };
+
+              // Criando o gráfico da Pergunta2
+              createChart('GraficoPergunta2', 'Crescimento Populacional de Coelhos', Pergunta2, 'blue', 'Meses', 'População de Coelhos');
+
+              // Dados do gráfico da Pergunta3
+              const Pergunta3 = {
+                labels: ['0', '20', '40', '60', '80', '100', '120'],
+                data: [0, 1600, 3200, 4800, 6400, 8000, 9600]
+              };
+
+              // Criando o gráfico da Pergunta3
+              createChart('GraficoPergunta3', 'Área do Terreno', Pergunta3, 'purple', 'Comprimento (m)', 'Área (m²)');
+
+              // Dados do gráfico da Pergunta4
+              const Pergunta4 = {
+                labels: ['0', '1', '2', '3', '4', '5', '6'],
+                data: [0, 25.1, 40.2, 45.3, 40.4, 25.5, 0]
+              };
+
+              // Criando o gráfico da Pergunta4
+              createChart('GraficoPergunta4', 'Movimento da Bola', Pergunta4, 'red', 'Tempo (s)', 'Altura (m)');
+
+              // Dados do gráfico da Pergunta
+              const Pergunta = {
+                labels: ['0', '30', '60'],
+                data: [0, 10, 20]
+              };
+
+              // Criando o gráfico da Pergunta
+              createChart('GraficoPergunta', 'Distância Percorrida em Função do Tempo', Pergunta, 'orange', 'Tempo (min)', 'Distância (km)');
+
+              // Dados do gráfico da Nova Pergunta 1
+              const NovaPergunta1 = {
+                labels: ['0', '1', '2', '3', '4', '5'],
+                data: [1000, 950, 900, 850, 800, 750]
+              };
+
+              // Criando o gráfico da Nova Pergunta 1
+              createChart('GraficoPergunta5', 'Quantidade de Água no Reservatório', NovaPergunta1, 'blue', 'Tempo (horas)', 'Quantidade de Água (litros)');
+
+              // Dados do gráfico da Nova Pergunta 2
+              const NovaPergunta2 = {
+                labels: ['0', '1', '2', '3', '4'],
+                data: [200, 300, 400, 500, 600]
+              };
+
+              // Criando o gráfico da Nova Pergunta 2
+              createChart('GraficoPergunta6', 'Quantidade de Combustível no Tanque', NovaPergunta2, 'purple', 'Tempo (horas)', 'Quantidade de Combustível (litros)');
+
+              // Dados do gráfico da Nova Pergunta 3
+              const NovaPergunta3 = {
+                labels: ['0', '1', '2', '3'],
+                data: [50, 100, 150, 200]
+              };
+
+              // Criando o gráfico da Nova Pergunta 3
+              createChart('GraficoPergunta7', 'Altura do Balão', NovaPergunta3, 'red', 'Tempo (minutos)', 'Altura (metros)');
+            });
+          </script>
+    </div>
+
+    <div class="box">
+      <h2>Questões</h2>
+      <h3>(Enem 2018 – PPL) Uma indústria automobilística está testando um novo modelo de carro. Cinquenta litros de combustível são colocados no tanque desse carro, que é dirigido em uma pista de testes até que todo o combustível tenha sido consumido. O segmento de reta no gráfico mostra o resultado desse teste, no qual a quantidade de combustível no tanque é indicada no eixo y (vertical), e a distância percorrida pelo automóvel é indicada no eixo x (horizontal).</h3>
+      
+      <div class="chart-container">
+        <canvas id="GraficoPergunta1"></canvas>
+      </div>
+      
+      <h3>A expressão algébrica que relaciona a quantidade de combustível no tanque e a distância percorrida pelo automóvel é:</h3>
+      
+      <details>
+        <summary>Ver Resposta</summary>
+        <p><strong>Solução:</strong></p>
+        <p>Vamos começar a resolver a equação da reta, que tem a forma geral:</p>
+        <code>y = ax + b</code>
+      
+        <p>Sabemos que:</p>
+        <ul>
+          <li>Quando <strong>x = 0</strong> (início do teste), a quantidade de combustível no tanque é <strong>50 litros</strong>, logo, temos <strong>y = 50</strong>.</li>
+          <li>Quando o combustível é consumido completamente (quando <strong>y = 0</strong>), a distância percorrida pelo automóvel é <strong>x = 500</strong> metros.</li>
+        </ul>
+      
+        <p>Substituindo essas informações na equação <code>y = ax + b</code>, temos:</p>
+      <code>
+        <pre>
+          Quando x = 0:
+          50 = a(0) + b
+          50 = b
+        </pre>
+        
+        <pre>
+          Quando y = 0:
+          0 = a(500) + 50
+          0 = 500a + 50
+          500a = -50
+          a = -50/500
+          a = -1/10
+        </pre>
+      </code>
+        <p>Logo, a expressão que relaciona a quantidade de combustível no tanque e a distância percorrida pelo automóvel é:</p>
+        <code>y = -x/10 + 50</code>
+      
+        <p>Essa equação descreve a relação entre o combustível restante e a distância percorrida.</p>
+      </details>
+
+      <h3>Um reservatório de água está sendo esvaziado a uma taxa constante. Inicialmente, o reservatório contém 1000 litros de água. Após 5 horas, restam 750 litros de água. O gráfico abaixo mostra a quantidade de água no reservatório (em litros) em função do tempo (em horas).</h3>
+  
+<div class="chart-container">
+  <canvas id="GraficoPergunta5"></canvas>
+</div>
+  
+<h3>Determine a expressão algébrica que relaciona a quantidade de água no reservatório e o tempo.</h3>
+  
+<details>
+  <summary>Ver Resposta</summary>
+  <p><strong>Solução:</strong></p>
+  <p>Vamos resolver a equação da reta, que tem a forma geral:</p>
+  <code>y = ax + b</code>
+  
+  <p>Sabemos que:</p>
+  <ul>
+    <li>Quando <strong>x = 0</strong> (início), a quantidade de água é <strong>1000 litros</strong>, logo, temos <strong>y = 1000</strong>.</li>
+    <li>Após 5 horas (quando <strong>x = 5</strong>), a quantidade de água é <strong>750 litros</strong>.</li>
+  </ul>
+  
+  <p>Substituindo essas informações na equação <code>y = ax + b</code>, temos:</p>
+<code>
+  <pre>
+    Quando x = 0:
+    1000 = a(0) + b
+    1000 = b
+  </pre>
+    
+  <pre>
+    Quando x = 5:
+    750 = a(5) + 1000
+    750 = 5a + 1000
+    5a = 750 - 1000
+    5a = -250
+    a = -250/5
+    a = -50
+  </pre>
+</code>
+  <p>Logo, a expressão que relaciona a quantidade de água no reservatório e o tempo é:</p>
+  <code>y = -50x + 1000</code>
+  
+  <p>Essa equação descreve a relação entre a quantidade de água restante e o tempo.</p>
+</details>
+
+<!-- Nova Pergunta 2 -->
+<h3>Um tanque de combustível de um caminhão está sendo preenchido a uma taxa constante. Inicialmente, o tanque contém 200 litros de combustível. Após 4 horas, o tanque contém 600 litros de combustível. O gráfico abaixo mostra a quantidade de combustível no tanque (em litros) em função do tempo (em horas).</h3>
+  
+<div class="chart-container">
+  <canvas id="GraficoPergunta6"></canvas>
+</div>
+  
+<h3>Determine a expressão algébrica que relaciona a quantidade de combustível no tanque e o tempo.</h3>
+  
+<details>
+  <summary>Ver Resposta</summary>
+  <p><strong>Solução:</strong></p>
+  <p>Vamos resolver a equação da reta, que tem a forma geral:</p>
+  <code>y = ax + b</code>
+  
+  <p>Sabemos que:</p>
+  <ul>
+    <li>Quando <strong>x = 0</strong> (início), a quantidade de combustível é <strong>200 litros</strong>, logo, temos <strong>y = 200</strong>.</li>
+    <li>Após 4 horas (quando <strong>x = 4</strong>), a quantidade de combustível é <strong>600 litros</strong>.</li>
+  </ul>
+  
+  <p>Substituindo essas informações na equação <code>y = ax + b</code>, temos:</p>
+<code>
+  <pre>
+    Quando x = 0:
+    200 = a(0) + b
+    200 = b
+  </pre>
+    
+  <pre>
+    Quando x = 4:
+    600 = a(4) + 200
+    600 = 4a + 200
+    4a = 600 - 200
+    4a = 400
+    a = 400/4
+    a = 100
+  </pre>
+</code>
+  <p>Logo, a expressão que relaciona a quantidade de combustível no tanque e o tempo é:</p>
+  <code>y = 100x + 200</code>
+  
+  <p>Essa equação descreve a relação entre a quantidade de combustível e o tempo.</p>
+</details>
+
+<!-- Nova Pergunta 3 -->
+<h3>Um balão de ar quente está subindo a uma taxa constante. Inicialmente, o balão está a uma altura de 50 metros. Após 3 minutos, o balão está a uma altura de 200 metros. O gráfico abaixo mostra a altura do balão (em metros) em função do tempo (em minutos).</h3>
+  
+<div class="chart-container">
+  <canvas id="GraficoPergunta7"></canvas>
+</div>
+  
+<h3>Determine a expressão algébrica que relaciona a altura do balão e o tempo.</h3>
+  
+<details>
+  <summary>Ver Resposta</summary>
+  <p><strong>Solução:</strong></p>
+  <p>Vamos resolver a equação da reta, que tem a forma geral:</p>
+  <code>y = ax + b</code>
+  
+  <p>Sabemos que:</p>
+  <ul>
+    <li>Quando <strong>x = 0</strong> (início), a altura do balão é <strong>50 metros</strong>, logo, temos <strong>y = 50</strong>.</li>
+    <li>Após 3 minutos (quando <strong>x = 3</strong>), a altura do balão é <strong>200 metros</strong>.</li>
+  </ul>
+  
+  <p>Substituindo essas informações na equação <code>y = ax + b</code>, temos:</p>
+<code>
+  <pre>
+    Quando x = 0:
+    50 = a(0) + b
+    50 = b
+  </pre>
+    
+  <pre>
+    Quando x = 3:
+    200 = a(3) + 50
+    200 = 3a + 50
+    3a = 200 - 50
+    3a = 150
+    a = 150/3
+    a = 50
+  </pre>
+</code>
+  <p>Logo, a expressão que relaciona a altura do balão e o tempo é:</p>
+  <code>y = 50x + 50</code>
+  
+  <p>Essa equação descreve a relação entre a altura do balão e o tempo.</p>
+</details>
+
+<!-- Perguntas sem gráfico -->
+<h3>Uma empresa de táxi cobra uma tarifa fixa de R$ 5,00 mais R$ 2,00 por quilômetro percorrido. Qual é a expressão algébrica que representa o custo total (C) em função da distância percorrida (d)?</h3>
+  
+<h3>Determine a expressão algébrica que relaciona a quantidade de combustível no tanque e a distância percorrida pelo automóvel é:</h3>
+
+<details>
+  <summary>Ver Resposta</summary>
+  <p><strong>Solução:</strong></p>
+  <p>Vamos usar a fórmula do custo total:</p>
+  <code>C = tarifa fixa + (custo por km * distância)</code>
+  
+  <p>Sabemos que:</p>
+  <ul>
+    <li>A tarifa fixa é R$ 5,00.</li>
+    <li>O custo por quilômetro é R$ 2,00.</li>
+  </ul>
+  
+  <p>Substituindo essas informações na fórmula, temos:</p>
+<code>
+  <pre>
+    C = 5 + 2d
+  </pre>
+</code>
+  <p>Portanto, a expressão algébrica que representa o custo total em função da distância percorrida é:</p>
+  <code>C = 5 + 2d</code>
+</details>
+
+      <h2>Questões Dificeis</h2>
+<h3>Um estudante está testando a eficiência de uma bicicleta, medindo a distância percorrida em função do tempo. Ele registrou os seguintes dados:</h3>
+<ul>
+  <li>Distância percorrida: 0 km após 0 minutos;</li>
+  <li>Distância percorrida: 10 km após 30 minutos;</li>
+  <li>Distância percorrida: 20 km após 60 minutos.</li>
+</ul>
+
+<div class="chart-container">
+  <canvas id="GraficoPergunta"></canvas>
+</div>
+
+<h3>A expressão algébrica que relaciona a distância percorrida (y) e o tempo (x) é:</h3>
+
+<details>
+  <summary>Ver Resposta</summary>
+  <p><strong>Solução:</strong></p>
+  <p>A equação da reta que relaciona distância e tempo é da forma:</p>
+  <code>y = ax + b</code>
+
+  <p>Sabemos que:</p>
+  <ul>
+    <li>Quando <strong>x = 0</strong>, a distância percorrida é <strong>0 km</strong>, então <strong>y = 0</strong>;</li>
+    <li>Quando <strong>x = 30</strong> minutos, a distância percorrida é <strong>10 km</strong>;</li>
+    <li>Quando <strong>x = 60</strong> minutos, a distância percorrida é <strong>20 km</strong>.</li>
+  </ul>
+
+  <p>Substituindo as informações na equação:</p>
+
+  <pre>
+    Quando x = 0:
+    0 = a(0) + b
+    0 = b
+  </pre>
+
+  <pre>
+    Quando x = 30:
+    10 = a(30) + 0
+    a = 10 / 30
+    a = 1/3
+  </pre>
+
+  <p>Logo, a expressão que relaciona a distância (y) e o tempo (x) é:</p>
+  <code>y = (1/3)x</code>
+
+  <p>Esta equação descreve a relação entre a distância percorrida e o tempo.</p>
+</details>
+
+<!-- Segunda Pergunta (UNICAMP) -->
+<h3>Um fazendeiro observa que a população de coelhos em sua fazenda segue o modelo de crescimento exponencial:</h3>
+<ul>
+  <li>A população inicial é de 100 coelhos;</li>
+  <li>A população dobra a cada 2 meses.</li>
+</ul>
+
+<div class="chart-container">
+  <canvas id="GraficoPergunta2"></canvas>
+</div>
+
+<h3>A expressão que descreve a população de coelhos (P) após t meses é:</h3>
+
+<details>
+  <summary>Ver Resposta</summary>
+  <p><strong>Solução:</strong></p>
+  <p>A equação para o crescimento exponencial tem a forma:</p>
+  <code>P(t) = P0 * 2^(t/T)</code>
+
+  <p>Onde:</p>
+  <ul>
+    <li><strong>P0</strong> é a população inicial (100 coelhos);</li>
+    <li><strong>T</strong> é o tempo necessário para a população dobrar (2 meses);</li>
+    <li><strong>t</strong> é o tempo em meses.</li>
+  </ul>
+
+  <p>Substituindo os valores conhecidos, temos:</p>
+  <pre>
+    P(t) = 100 * 2^(t/2)
+  </pre>
+
+  <p>Logo, a equação que descreve a população de coelhos após t meses é:</p>
+  <code>P(t) = 100 * 2^(t/2)</code>
+
+  <p>Esta equação descreve o crescimento da população de coelhos ao longo do tempo.</p>
+</details>
+
+<!-- Terceira Pergunta (ENEM) -->
+<h3>Um produtor rural planta milho em um terreno retangular. O comprimento do terreno é 120 metros, e a largura é 80 metros. Qual é a área total do terreno em metros quadrados?</h3>
+
+<div class="chart-container">
+  <canvas id="GraficoPergunta3"></canvas>
+</div>
+
+<h3>Como calcular a área total do terreno?</h3>
+
+<details>
+  <summary>Ver Resposta</summary>
+  <p><strong>Solução:</strong></p>
+  <p>A área de um terreno retangular é dada pela fórmula:</p>
+  <code>A = comprimento × largura</code>
+
+  <p>Substituindo os valores conhecidos:</p>
+  <pre>
+    A = 120 × 80
+    A = 9600 metros quadrados
+  </pre>
+
+  <p>Portanto, a área total do terreno é de:</p>
+  <code>9600 metros quadrados</code>
+</details>
+
+<!-- Quarta Pergunta (UNICAMP) -->
+<h3>Um estudante está estudando o movimento de uma bola lançada para cima com uma velocidade inicial de 30 m/s. A equação que descreve a altura da bola (h) em função do tempo (t) é dada por:</h3>
+
+<div class="chart-container">
+  <canvas id="GraficoPergunta4"></canvas>
+</div>
+
+<h3>Como calcular a altura da bola em função do tempo?</h3>
+
+<details>
+  <summary>Ver Resposta</summary>
+  <p><strong>Solução:</strong></p>
+  <p>A equação que descreve o movimento de um corpo lançado verticalmente é dada por:</p>
+  <code>h(t) = h0 + v0 * t - (1/2) * g * t^2</code>
+
+  <p>Onde:</p>
+  <ul>
+    <li><strong>h0</strong> é a altura inicial (0 metros, pois a bola é lançada do solo);</li>
+    <li><strong>v0</strong> é a velocidade inicial (30 m/s);</li>
+    <li><strong>g</strong> é a aceleração da gravidade (aproximadamente 9,8 m/s²);</li>
+    <li><strong>t</strong> é o tempo em segundos.</li>
+  </ul>
+
+  <p>Substituindo os valores conhecidos na equação:</p>
+  <pre>
+    h(t) = 0 + 30t - (1/2) * 9,8 * t^2
+    h(t) = 30t - 4,9t^2
+  </pre>
+
+  <p>Portanto, a equação que descreve a altura da bola em função do tempo é:</p>
+  <code>h(t) = 30t - 4,9t^2</code>
+</details>
+
+<!-- Nova Pergunta 1 -->
+
+
+  </div>
+</body>
+
+</html>
