@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função 2º Grau</title>
+    <link rel="stylesheet" href="CSS_MATEMATICA/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Função 2º Grau</h1>
+        
+        <!-- Introdução -->
+        <div class="box">
+            <h2>1. O que é uma Função 2º Grau?</h2>
+            <p>Uma função de 2º grau é uma relação matemática onde a variável dependente (geralmente "y" ou "f(x)") varia de forma quadrática com a variável independente (geralmente "x"). Sua fórmula geral é:</p>
+            <code>f(x) = ax<sup>2</sup> + bx + c</code>
+            <p>Em outras palavras, a função descreve uma parábola no gráfico cartesiano. Essa parábola pode ser côncava para cima ou para baixo, dependendo do valor do coeficiente <strong>a</strong>.</p>
+            <ul>
+                <li><strong>x:</strong> Variável independente.</li>
+                <li><strong>f(x) ou y:</strong> Variável dependente.</li>
+                <li><strong>a:</strong> Coeficiente quadrático, determina a concavidade da parábola.</li>
+                <li><strong>b:</strong> Coeficiente linear, determina a inclinação da parábola.</li>
+                <li><strong>c:</strong> Coeficiente constante, indica onde a parábola corta o eixo <strong>y</strong>.</li>
+            </ul>
+        </div>
+
+        <!-- Gráficos de Funções -->
+        <div class="box">
+            <h2>2. Gráficos de Funções</h2>
+
+            <h3>Função Côncava para Cima (a > 0)</h3>
+            <div class="chart-container">
+                <canvas id="upwardChart"></canvas>
+            </div>
+
+            <h3>Função Côncava para Baixo (a < 0)</h3>
+            <div class="chart-container">
+                <canvas id="downwardChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Arcos de Função -->
+        <div class="box">
+            <h2>3. Arcos de Função</h2>
+        
+            <h3>a > 0 (Abertura voltada para cima)</h3>
+        
+            <p>&Delta; > 0: A função quadrática possui duas raízes reais distintas, ou seja, ela corta o eixo X em dois pontos. Este gráfico mostra a curva com os dois pontos de interseção no eixo X.</p>
+            <canvas id="grafico-a-delta-maior-0"></canvas>
+        
+            <p>&Delta; = 0: A função quadrática possui uma única raiz real (raiz dupla), ou seja, o vértice da parábola está exatamente sobre o eixo X. O gráfico demonstra esta situação especial.</p>
+            <canvas id="grafico-a-delta-igual-0"></canvas>
+        
+            <p>&Delta; < 0: A função quadrática não possui raízes reais, ou seja, a parábola não corta o eixo X. O gráfico ilustra a curva sem interseção com o eixo X.</p>
+            <canvas id="grafico-a-delta-menor-0"></canvas>
+        
+            <h3>a < 0 (Abertura voltada para baixo)</h3>
+        
+            <p>&Delta; > 0: A função quadrática possui duas raízes reais distintas. A parábola se abre para baixo e corta o eixo X em dois pontos. Este gráfico ilustra essas interseções.</p>
+            <canvas id="grafico-neg-a-delta-maior-0"></canvas>
+        
+            <p>&Delta; = 0: A função quadrática possui uma única raiz real (raiz dupla). O vértice da parábola está exatamente sobre o eixo X, com a abertura voltada para baixo. Este gráfico demonstra essa situação.</p>
+            <canvas id="grafico-neg-a-delta-igual-0"></canvas>
+        
+            <p>&Delta; < 0: A função quadrática não possui raízes reais, ou seja, a parábola não corta o eixo X. Aqui, a parábola com abertura para baixo não toca o eixo X em nenhum ponto.</p>
+            <canvas id="grafico-neg-a-delta-menor-0"></canvas>
+        </div>
+
+        <!-- Vértice da parábola -->
+        <div class="box">
+            <h2>4. Vértice da parábola</h2>
+            <p>O vértice é o ponto onde a parábola atinge seu valor mínimo (a > 0) ou máximo (a < 0).</p>
+            <p>As fórmulas para encontrar o vértice são:</p>
+            <code>XV = -b / 2a</code>
+            <code>YV = -&Delta; / 4a</code>
+            <div class="chart-container">
+                <canvas id="vertexChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Fórmulas -->
+        <div class="box">
+            <h2>5. Fórmulas</h2>
+
+            <!-- Fórmula geral -->
+            <p>A equação quadrática geral é representada por:</p>
+            <p><strong><code>ax<sup>2</sup> + bx + c = y</code></strong></p>
+
+            <h3>Forma Fatorada</h3>
+            <p>A forma fatorada de uma equação quadrática é:</p>
+            <p><strong><code>y = a(x - x<sub>1</sub>)(x - x<sub>2</sub>)</code></strong></p>
+            <p>Onde:</p>
+            <ul>
+                <li><strong>a:</strong> Coeficiente quadrático.</li>
+                <li><strong>x<sub>1</sub> e x<sub>2</sub>:</strong> As raízes da equação quadrática.</li>
+            </ul>
+
+            <!-- Fórmula de Bhaskara -->
+            <p>A fórmula para calcular as raízes de uma equação quadrática é dada por:</p>
+            <p>
+                <strong><code>x = (-b ± √(b<sup>2</sup> - 4ac)) / 2a</code></strong>
+            </p>
+            <p>Essa fórmula é conhecida como Fórmula de Bhaskara, e o discriminante <code>&Delta; = b<sup>2</sup> - 4ac</code> determina o número de soluções reais:</p>
+            <ul>
+                <li><strong>&Delta; > 0:</strong> Duas raízes reais distintas.</li>
+                <li><strong>&Delta; = 0:</strong> Uma única raiz real (raiz dupla).</li>
+                <li><strong>&Delta; < 0:</strong> Nenhuma raiz real.</li>
+            </ul>
+
+            <!-- Soma e Produto das raízes -->
+            <p>Além disso, as propriedades da soma e do produto das raízes podem ser usadas para simplificar cálculos:</p>
+            <ul>
+                <li><strong>Soma das raízes:</strong> <code>S = x<sub>1</sub> + x<sub>2</sub> = -b / a</code></li>
+                <li><strong>Produto das raízes:</strong> <code>P = x<sub>1</sub> ⋅ x<sub>2</sub> = c / a</code></li>
+            </ul>
+
+            <!-- Equações incompletas -->
+            <h3>Equações incompletas</h3>
+
+            <p>Para equações quadráticas incompletas, onde um dos coeficientes (b ou c) é zero, é possível simplificar os cálculos:</p>
+
+            <!-- Caso 1 -->
+            <p><strong>1. Equação do tipo <code>ax<sup>2</sup> - bx = 0</code></strong></p>
+            <p>Nesse caso, o primeiro valor de x será sempre 0, e o outro pode ser calculado isolando a variável:</p>
+            <p>Exemplo: <code>4x<sup>2</sup> - 6x = 0</code></p>
+            <p>Fatorando: <code>x(4x - 6) = 0</code></p>
+            <p>Soluções: <code>x = 0</code> ou <code>x = 6 / 4</code></p>
+
+            <!-- Caso 2 -->
+            <p><strong>2. Equação do tipo <code>ax<sup>2</sup> + c = 0</code></strong></p>
+            <p>Nesse caso, podemos usar:</p>
+            <p><strong><code>x = ±√(-c / a)</code></strong></p>
+            <p>Exemplo: <code>x<sup>2</sup> + 9 = 0</code></p>
+            <p>Soluções: <code>x = √(9 / 1) → x = ±3</code></p>
+        </div>
+
+        <h2>7. Questões</h2>
+
+        <!-- Questão 1 -->
+        <h3>Determine x pertencente aos reais tal que <code>(x² – 100x)².(x² – 101x + 100)² = 0</code>.</h3>
+        <details>
+            <summary>Ver Resposta</summary>
+            <p><strong>Explicação:</strong> A equação será igual a zero quando qualquer um dos fatores for igual a zero. Para resolver:</p>
+            <ul>
+                <li><strong>1º Fator:</strong> x² - 100x = 0 → Podemos fatorar como x(x - 100) = 0. Assim, x = 0 ou x = 100.</li>
+                <li><strong>2º Fator:</strong> x² - 101x + 100 = 0 → Isso é uma equação quadrática. Fatorando, temos (x - 1)(x - 100) = 0, logo x = 1 ou x = 100.</li>
+            </ul>
+            <p><strong>Resposta:</strong> O conjunto solução é {0, 1, 100}, pois são os valores que tornam a equação verdadeira.</p>
+        </details>
+
+        <!-- Questão 2 -->
+        <h3>Calcule o valor de k de modo que a função <code>f(x) = 4x² – 4x – k</code> não tenha raízes, isto é, o gráfico da parábola não possui ponto em comum com o eixo x.</h3>
+        <details>
+            <summary>Ver Resposta</summary>
+            <p><strong>Explicação:</strong> Para que uma função quadrática não tenha raízes reais, o discriminante (&Delta;) deve ser menor que zero.</p>
+            <p>O discriminante é dado por &Delta; = b² - 4ac. Substituímos os coeficientes da função:</p>
+            <p>&Delta; = (-4)² - 4(4)(-k) = 16 + 16k</p>
+            <p>Para que não existam raízes, exigimos que &Delta; < 0:</p>
+            <p>16 + 16k < 0 → 16k < -16 → k < -1</p>
+            <p><strong>Resposta:</strong> Para que a função não tenha raízes reais, k deve ser menor que -1.</p>
+        </details>
+
+        <!-- Questão 3 -->
+        <h3>Determine os valores de m, para que a função <code>f(x) = (m – 2)x² – 2x + 6</code> admita raízes reais.</h3>
+        <details>
+            <summary>Ver Resposta</summary>
+            <p><strong>Explicação:</strong> Para que uma função quadrática tenha raízes reais, o discriminante (&Delta;) deve ser maior ou igual a zero.</p>
+            <p>Aqui, &Delta; = b² - 4ac. Os coeficientes são: a = (m - 2), b = -2, c = 6.</p>
+            <p>Substituindo, temos:</p>
+            <p>&Delta; = (-2)² - 4(m - 2)(6) = 4 - 24(m - 2)</p>
+            <p>Expandimos: &Delta; = 4 - 24m + 48</p>
+            <p>Simplificando: &Delta; = 52 - 24m</p>
+            <p>Para que a função tenha raízes reais, &Delta; ≥ 0:</p>
+            <p>52 - 24m ≥ 0 → 24m ≤ 52 → m ≤ 52/24 → m ≤ 13/6</p>
+            <p><strong>Resposta:</strong> O valor de m deve ser menor ou igual a 13/6.</p>
+        </details>
+
+        <!-- Questão 4 -->
+        <h3>O gráfico da função quadrática definida por <code>y = x² – mx + (m – 1)</code>, em que m ∈ R, tem um único ponto em comum com o eixo das abscissas. Determine y associado ao valor de x = 2.</h3>
+        <details>
+            <summary>Ver Resposta</summary>
+            <p><strong>Explicação:</strong> Se o gráfico tem um único ponto em comum com o eixo x, então &Delta; = 0. Vamos determinar m usando:</p>
+            <p>&Delta; = b² - 4ac = 0 → (-m)² - 4(1)(m - 1) = 0</p>
+            <p>Expandindo: m² - 4m + 4 = 0 → (m - 2)² = 0 → m = 2</p>
+            <p>Substituímos m = 2 na função:</p>
+            <p>y = x² - 2x + 1</p>
+            <p>Para x = 2: y = (2)² - 2(2) + 1 = 4 - 4 + 1 = 1</p>
+            <p><strong>Resposta:</strong> Quando x = 2, o valor de y é 1.</p>
+        </details>
+
+        <!-- Questão 5 -->
+        <h3>(UNESP - 2017) Uma função quadrática f é dada por <code>f(x) = x² + bx + c</code>, com b e c reais. Se <code>f(1) = –1</code> e <code>f(2) – f(3) = 1</code>, o menor valor que f(x) pode assumir, quando x varia no conjunto dos números reais, é igual a:</h3>
+        <details>
+            <summary>Ver Resposta</summary>
+            <p><strong>Explicação:</strong> Primeiro, determinamos b e c usando as condições dadas:</p>
+            <p>Para f(1) = -1: 1² + b(1) + c = -1 → b + c = -2</p>
+            <p>Para f(2) - f(3) = 1:</p>
+            <p>[2² + 2b + c] - [3² + 3b + c] = 1 → 4 + 2b + c - (9 + 3b + c) = 1</p>
+            <p>Simplificando: 4 + 2b + c - 9 - 3b - c = 1 → -5 - b = 1 → b = -6</p>
+            <p>Substituímos b = -6 em b + c = -2:</p>
+            <p>-6 + c = -2 → c = 4</p>
+            <p>A função é f(x) = x² - 6x + 4.</p>
+            <p>O menor valor de uma função quadrática ocorre no vértice: x_v = -b/2a = -(-6)/2(1) = 3.</p>
+            <p>Substituímos x = 3 em f(x): f(3) = (3)² - 6(3) + 4 = 9 - 18 + 4 = -5.</p>
+            <p><strong>Resposta:</strong> O menor valor é -5.</p>
+        </details>
+
+        <!-- Questão 6 -->
+        <h3>(UERJ - 2016) Observe a função f, definida por: <code>f(x) = x² - 2kx + 29</code> para <code>x ∈ R</code>. Se <code>f(x) ≥ 4</code>, para todo número real x, o valor mínimo da função f é 4. Assim, o valor positivo do parâmetro k é:</h3>
+        <details>
+            <summary>Ver Resposta</summary>
+            <p><strong>Explicação:</strong> Para que f(x) ≥ 4, o vértice da parábola deve estar em f(x_v) = 4. O vértice ocorre em x_v = -b/2a = -(-2k)/2(1) = k.</p>
+            <p>Substituímos x = k na função e igualamos a 4:</p>
+            <p>f(k) = k² - 2k(k) + 29 = 4</p>
+            <p>Simplificando: k² - 2k² + 29 = 4 → -k² + 29 = 4 → k² = 25</p>
+            <p>Como k é positivo, temos k = 5.</p>
+            <p><strong>Resposta:</strong> O valor positivo de k é 5.</p>
+        </details>
+        
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function createChart(chartId, chartLabel, chartData, chartBorderColor, vertexPoint) {
+                const ctx = document.getElementById(chartId).getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['-3', '-2', '-1', '0', '1', '2', '3'],
+                        datasets: [{
+                            label: chartLabel,
+                            data: chartData,
+                            borderColor: chartBorderColor,
+                            borderWidth: 2,
+                            fill: false,
+                            pointBackgroundColor: function(context) {
+                                const index = context.dataIndex;
+                                const value = context.dataset.data[index];
+                                return value === vertexPoint ? 'red' : chartBorderColor;
+                            },
+                            pointRadius: function(context) {
+                                const index = context.dataIndex;
+                                const value = context.dataset.data[index];
+                                return value === vertexPoint ? 6 : 3;
+                            }
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: chartLabel
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Valor de X'
+                                },
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Valor de f(x) ou Y'
+                                },
+                                grid: {
+                                    color: (ctx) => ctx.tick.value === 0 ? 'rgba(0, 0, 0, 1)' : 'rgba(200, 200, 200, 0.3)', // Linha Y mais escura no 0
+                                    lineWidth: (ctx) => ctx.tick.value === 0 ? 2 : 0.5, // Espessura maior no 0
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        
+            // Dados para gráficos
+            const dataUpward = [9, 4, 1, 0, 1, 4, 9]; // a > 0
+            const dataDownward = [-9, -4, -1, 0, -1, -4, -9]; // a < 0
+            const dataADeltaMaior0 = [6, 3, 0, -1, 0, 3, 6];
+            const dataADeltaIgual0 = [9, 4, 1, 0, 1, 4, 9];
+            const dataADeltaMenor0 = [10, 5, 2, 1, 2, 5, 10];
+            const dataNegDeltaMaior0 = [-6, -3, 0, 1, 0, -3, -6];
+            const dataNegDeltaIgual0 = [-9, -4, -1, 0, -1, -4, -9];
+            const dataNegDeltaMenor0 = [-10, -5, -2, -1, -2, -5, -10];
+            const dataVertex = [6, 3, 0, -1, 0, 3, 6]; // Exemplo de dados com vértice
+            const vertexPoint = -1; // Valor do vértice
+
+            // Criando gráficos
+            createChart('upwardChart', 'Côncava para Cima (a > 0)', dataUpward, 'rgba(75, 192, 192, 1)');
+            createChart('downwardChart', 'Côncava para Baixo (a < 0)', dataDownward, 'rgba(255, 99, 132, 1)');
+            createChart('grafico-a-delta-maior-0', 'a > 0, Δ > 0', dataADeltaMaior0, 'rgba(75, 192, 192, 1)');
+            createChart('grafico-a-delta-igual-0', 'a > 0, Δ = 0', dataADeltaIgual0, 'rgba(75, 192, 192, 1)');
+            createChart('grafico-a-delta-menor-0', 'a > 0, Δ < 0', dataADeltaMenor0, 'rgba(75, 192, 192, 1)');
+            createChart('grafico-neg-a-delta-maior-0', 'a < 0, Δ > 0', dataNegDeltaMaior0, 'rgba(255, 99, 132, 1)');
+            createChart('grafico-neg-a-delta-igual-0', 'a < 0, Δ = 0', dataNegDeltaIgual0, 'rgba(255, 99, 132, 1)');
+            createChart('grafico-neg-a-delta-menor-0', 'a < 0, Δ < 0', dataNegDeltaMenor0, 'rgba(255, 99, 132, 1)');
+            createChart('vertexChart', 'Gráfico com Vértice Marcado', dataVertex, 'rgba(153, 102, 255, 1)', vertexPoint);
+        });
+    </script>
+</body>
+</html>
