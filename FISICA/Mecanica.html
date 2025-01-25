@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecânica</title>
+    <link rel="stylesheet" href="CSS_FISICA/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mecânica</h1>
+        
+        <div class="box">
+            <h2>1. Introdução</h2>
+            <h3>Mecânica é a área da Física que estuda os movimentos e suas causas.</h3>
+            <ul>
+                <li><strong>Cinemática:</strong> Estudo do movimento sem se preocupar com suas causas.</li>
+                <li><strong>Dinâmica:</strong> Estudo das causas do movimento.</li>
+                <li><strong>Estática:</strong> Estudo dos corpos em equilíbrio.</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>2. Conceitos Básicos</h2>
+            <ul>
+                <li><strong>Referencial:</strong> Ponto de vista utilizado para analisar o movimento.</li>
+                <li><strong>Distância:</strong> Total percorrido ao longo do trajeto.</li>
+                <li><strong>Deslocamento:</strong> Variação da posição, considerando apenas o ponto inicial e final.</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>3. Velocidade</h2>
+            <ul>
+                <li><strong>Velocidade Média:</strong> Média das velocidades durante um intervalo de tempo.
+                    <code>VM = ΔS / ΔT</code>
+                </li>
+                <li><strong>Velocidade Instantânea:</strong> Velocidade em um momento específico.</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>4. Movimento Uniforme</h2>
+            <p>Quando a velocidade permanece constante durante o movimento.</p>
+            <h3>Equação:</h3>
+            <code>D = V.T</code>
+            <h3>Exemplo:</h3>
+            <code>
+                V = 3 m/s<br>
+                T = 4 s<br>
+                D = V.T = 3 * 4 = 12 m
+            </code>
+        </div>
+
+        <div class="box">
+            <h2>5. Movimento Uniformemente Variado</h2>
+            <p>Quando a aceleração é constante.</p>
+            <h3>Aceleração</h3>
+            <p>Variação da velocidade ao longo do tempo.</p>
+            <h3>Equação:</h3>
+            <code>A = (V - Vo) / T</code>
+            <h3>Equações:</h3>
+            <code>
+                V = Vo + A.T<br>
+                D = Vo.T + (A.T²) / 2<br>
+                V² = Vo² + 2.A.D
+            </code>
+            <h3>Tipos de Movimento:</h3>
+            <ul>
+                <li><strong>Movimento Acelerado:</strong> Velocidade aumenta com o tempo.</li>
+                <li><strong>Movimento Retardado:</strong> Velocidade diminui com o tempo.</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>6. Gravidade</h2>
+            <h3>Gravidade é uma força que atrai os corpos para o centro da Terra.</h3>
+            <p>A aceleração da gravidade na superfície da Terra é aproximadamente 9,8 m/s².</p>
+            <h3>Queda Livre</h3>
+            <p>Quando um objeto está em queda livre, ele está sujeito apenas à força da gravidade.</p>
+            <h3>Equações do Movimento</h3>
+            <ul>
+            <li><strong>Movimento para cima:</strong> <code>V = Vo - g.t</code></li>
+            <li><strong>Movimento para baixo:</strong> <code>V = Vo + g.t</code></li>
+            </ul>
+            <h3>Exemplo:</h3>
+            <p>Se um objeto é lançado para cima com uma velocidade inicial de 20 m/s, sua velocidade após 2 segundos será:</p>
+            <code>
+            V = Vo - g.t<br>
+            V = 20 - 9,8*2<br>
+            V = 20 - 19,6<br>
+            V = 0,4 m/s
+            </code>
+        </div>
+
+        <div class="box">
+            <h2>7. Movimento Circular Uniforme (MCU)</h2>
+            
+            <h3>Velocidade Circular Uniforme</h3>
+            <p>A velocidade circular uniforme é a rapidez com que um objeto percorre um caminho circular. Ela é constante, ou seja, o objeto mantém a mesma velocidade em torno do círculo.</p>
+            <code>V = ω.r</code>
+            <p>
+                <strong>Exemplo:</strong> Um carro está percorrendo uma pista circular com raio de 50 m a uma velocidade angular de 2 rad/s. Qual é a velocidade linear?<br>
+                <strong>Solução:</strong><br>
+                <code>V = ω.r = 2 × 50 = 100 m/s</code>
+            </p>
+            
+            <h3>Velocidade Linear</h3>
+            <p>A velocidade linear é a velocidade tangencial ao movimento circular, ou seja, é sempre perpendicular ao raio em qualquer ponto da trajetória. Ela pode ser calculada com a fórmula:</p>
+            <code>V = ω.r</code>
+            <p>
+                <strong>Exemplo:</strong> Imagine que uma bicicleta está andando em círculos com raio de 10 m e velocidade angular de 0,5 rad/s. A velocidade linear será:<br>
+                <code>V = ω.r = 0,5 × 10 = 5 m/s</code>
+            </p>
+        
+            <h3>Velocidade Angular</h3>
+            <p>A velocidade angular é a medida da taxa de variação do ângulo em relação ao tempo. Em outras palavras, é o ângulo percorrido por unidade de tempo.</p>
+            <code>ω = Δθ / Δt</code>
+            <p>
+                <strong>Exemplo:</strong> Se uma roda gira 4π radianos em 2 segundos, qual é a velocidade angular?<br>
+                <strong>Solução:</strong><br>
+                <code>ω = Δθ / Δt = 4π / 2 = 2π rad/s</code>
+            </p>
+            
+            <h3>Aceleração Centrípeta</h3>
+            <p>A aceleração centrípeta é a aceleração direcionada para o centro da trajetória circular. Ela é responsável por manter o objeto em movimento circular e é dada pela fórmula:</p>
+            <code>a<sub>c</sub> = V² / r</code>
+            <p>
+                <strong>Exemplo:</strong> Um carro faz uma curva com raio de 20 m a uma velocidade de 10 m/s. Qual é a aceleração centrípeta?<br>
+                <strong>Solução:</strong><br>
+                <code>a<sub>c</sub> = V² / r = (10²) / 20 = 100 / 20 = 5 m/s²</code>
+            </p>
+            
+            <h3>Período e Frequência</h3>
+            <p>O período (<code>T</code>) é o tempo necessário para completar uma volta em uma trajetória circular. A frequência (<code>f</code>) é o número de voltas por unidade de tempo. As duas grandezas são inversamente proporcionais:</p>
+            <code>T = 1 / f</code><br>
+            <code>ω = 2πf</code>
+            <p>
+                <strong>Exemplo:</strong> Um ventilador completa 120 rotações em um minuto. Qual é o período e a frequência?<br>
+                <strong>Solução:</strong><br>
+                Frequência: <code>f = número de voltas / tempo = 120 / 60 = 2 Hz</code>.<br>
+                Período: <code>T = 1 / f = 1 / 2 = 0,5 segundos</code>.
+            </p>
+            
+            <h3>Deslocamento Angular</h3>
+            <p>O deslocamento angular é a variação do ângulo (<code>Δθ</code>) ao longo do tempo. Quando multiplicado pelo raio da trajetória, ele resulta no deslocamento linear:</p>
+            <code>ΔS = Δθ . r</code>
+            <p>
+                <strong>Exemplo:</strong> Um ponto em uma roda percorre um ângulo de π/2 radianos em um círculo com raio de 5 m. Qual é o deslocamento linear?<br>
+                <strong>Solução:</strong><br>
+                <code>ΔS = Δθ . r = (π/2) × 5 = (5π / 2) m ≈ 7,85 m</code>.
+            </p>
+            
+            <div class="meio_circulo"></div>
+        </div>
+
+    
+        <div class="box questions">
+            <h2>Exercícios e Respostas</h2>
+
+            <h3>1. Um carro percorre 100 metros em 10 segundos. Qual é a sua velocidade média?</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    VM = ΔS / ΔT<br>
+                    VM = 100 / 10 = 10 m/s
+                </code>
+            </details>
+
+            <h3>2. Uma bicicleta sai do repouso e atinge uma velocidade de 12 m/s em 6 segundos. Qual foi sua aceleração?</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    A = (V - Vo) / T<br>
+                    A = (12 - 0) / 6 = 2 m/s²
+                </code>
+            </details>
+
+            <h3>3. Um objeto em movimento uniformemente variado percorre 50 metros em 5 segundos, com uma velocidade inicial de 2 m/s. Qual é a aceleração?</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    D = Vo.T + (A.T²) / 2<br>
+                    50 = 2*5 + (A*5²) / 2<br>
+                    50 = 10 + (25A) / 2<br>
+                    50 - 10 = 12.5A<br>
+                    40 = 12.5A<br>
+                    A = 40 / 12.5 = 3.2 m/s²
+                </code>
+            </details>
+
+            <h3>4. Um corpo em movimento uniforme percorre 20 metros em 4 segundos. Qual é a sua velocidade?</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    V = ΔS / ΔT<br>
+                    V = 20 / 4 = 5 m/s
+                </code>
+            </details>
+
+            <h3>5. Um carro inicia o movimento com 5 m/s e acelera a 2 m/s² durante 3 segundos. Qual será sua velocidade final?</h3>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                    V = Vo + A.T<br>
+                    V = 5 + 2*3<br>
+                    V = 5 + 6 = 11 m/s
+                </code>
+            </details>
+        </div>
+    </div>
+</body>
+</html>
