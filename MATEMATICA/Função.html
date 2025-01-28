@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função</title>
+    <link rel="stylesheet" href="CSS_MATEMATICA/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Funções Matemáticas</h1>
+        
+        <div class="box">
+            <h2>1. Função Composta</h2>
+            <p>A função composta é o resultado da combinação de duas ou mais funções, onde a saída de uma é utilizada como entrada para outra. Essa combinação é representada por <code>(g ◦ f)(x) = g(f(x))</code></p>
+            <h3>Exemplo</h3>
+            <p>Dadas as funções f(x) = 2x - 5 e g(x) = 3x + 1, vamos calcular:</p>
+            <p>
+                <strong>1. <code>g(f(x))</code></strong>
+                Substitua f(x) em g(x):<br>
+                <code>g(f(x)) = g(2x - 5) = 3(2x - 5) + 1</code>
+                <code>g(f(x)) = 6x - 15 + 1 = 6x - 14</code>
+            </p>
+            <p>
+                <strong>2. <code>f(g(x))</code></strong>
+                Substitua g(x) em f(x):<br>
+                <code>f(g(x)) = f(3x + 1) = 2(3x + 1) - 5</code>
+                <code>f(g(x)) = 6x + 2 - 5 = 6x - 3</code>
+            </p>
+        </div>
+        
+        <div class="box">
+            <h2>2. Função Inversa</h2>
+            <p>A função inversa é aquela que desfaz o efeito de uma função original. Para uma função <strong>f(x)</strong> e sua inversa <strong>f<sup>-1</sup>(x)</strong>, temos que <strong>f(f<sup>-1</sup>(x)) = x</strong> e <strong>f<sup>-1</sup>(f(x)) = x</strong>.</p>
+            <h3>Passos para encontrar a inversa:</h3>
+            <ol>
+                <li>Substitua f(x)por y.</li>
+                <li>Troque x por y.</li>
+                <li>Isolando y, você encontra a função inversa.</li>
+            </ol>
+            <h3>Exemplo</h3>
+            <p>Dada a funçãof(x) = 3x - 1, vamos encontrar sua inversa:</p>
+            <p>
+                <code>y = 3x - 1</code>
+                Troque x por y<:<br>
+                <code>x = 3y - 1</code>
+                Isolando y:<br>
+                <code>x + 1 = 3y</code>
+                <code>y = (x + 1) / 3</code>
+                Logo, a função inversa é <code>f<sup>-1</sup>(x) = (x + 1) / 3</code>
+            </p>
+        </div>
+        
+        <div class="box">
+            <h2>3. Função Modular</h2>
+            <p>A função modular retorna o valor absoluto de um número, ignorando seu sinal. Isso é representado por <code>f(x) = |x|</code></p>
+            <h3>Exemplo</h3>
+            <p>Dada a função <code>f(x) = |2x - 6|</code>, analisamos dois casos:</p>
+            <ul>
+                <li>Se x ≥ 3, <code>f(x) = 2x - 6</code></li>
+                <li>Se x < 3, <code>f(x) = -(2x - 6) = -2x + 6</code></li>
+            </ul>
+            <p>Assim, a função é definida em partes:</p>
+            <code>f(x) = { 2x - 6, se x ≥ 3; -2x + 6, se x < 3 }</code>
+        </div>
+        
+        <div class="box">
+            <h2>4. Função Exponencial</h2>
+            <p>Uma função exponencial tem a forma <strong>f(x) = a<sup>x</sup></strong>, onde <strong>a</strong> é uma base positiva e diferente de 1, e <strong>x</strong> é o expoente.</p>
+            <h3>Exemplo</h3>
+            <p>Dada a função <code>f(x) = 2<sup>x</sup></code></p>
+            <ul>
+                <li><code>f(2) = 2<sup>2</sup> = 4</code></li>
+                <li><code>f(3) = 2<sup>3</sup> = 8</code></li>
+                <li><code>f(-1) = 2<sup>-1</sup> = 1/2</code></li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>5. Questões Resolvidas</h2>
+
+            <h3>Questão 1</h3>
+            <p>Sabendo que <strong>a</strong> é um número real, considere a função <strong>f(x) = ax + 2</strong> definida para todo <strong>x</strong>. Se <strong>f(f(1)) = 1</strong>, determine o valor de <strong>a</strong>.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                f(f(1)) = 1<br>
+                Primeiro, calcule f(1):<br>
+                f(1) = a(1) + 2 = a + 2<br><br>
+                Agora, substitua a + 2 em f(x):<br>
+                f(a + 2) = a(a + 2) + 2<br>
+                a(a + 2) + 2 = 1<br>
+                a<sup>2</sup> + 2a + 2 = 1<br>
+                a<sup>2</sup> + 2a + 1 = 0<br>
+                (a + 1)<sup>2</sup> = 0<br>
+                a + 1 = 0<br>
+                a = -1
+                </code>
+            </details>
+
+            <h3>Questão 2</h3>
+            <p>Considere as funções <strong>f(x) = 2x + 1</strong> e <strong>g(x) = x<sup>2</sup> - 1</strong>. Então, as raízes da equação <strong>f(g(x)) = 0</strong> são:</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                <p>Primeiro, substituímos g(x) em f(x):</p>
+                f(g(x)) = f(x<sup>2</sup> - 1)<br>
+                f(x<sup>2</sup> - 1) = 2(x<sup>2</sup> - 1) + 1<br>
+                f(x<sup>2</sup> - 1) = 2x<sup>2</sup> - 2 + 1<br>
+                f(x<sup>2</sup> - 1) = 2x<sup>2</sup> - 1<br>
+                <p>Agora, resolvemos a equação 2x<sup>2</sup> - 1 = 0:</p>
+                2x<sup>2</sup> = 1<br>
+                x<sup>2</sup> = 1/2<br>
+                x = ±√(1/2)<br>
+                x = ±√2/2
+                </code>
+            </details>
+
+            <h3>Questão 3</h3>
+            <p>Considere a função composta <strong>h(x) = f(g(x))</strong>, onde <strong>f(x) = 2x + 3</strong> e <strong>g(x) = x - 4</strong>. Determine o valor de <strong>g(5)</strong>.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                Primeiro, calcule g(5):<br>
+                g(5) = 5 - 4 = 1<br><br>
+                Agora, substitua g(5) em f(x):<br>
+                h(5) = f(g(5)) = f(1) = 2(1) + 3 = 5
+                </code>
+            </details>
+
+            <h3>Questão 4</h3>
+            <p>Dada a função inversa <strong>f<sup>-1</sup>(x) = (x - 2) / 3</strong>, encontre a função original <strong>f(x)</strong>.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                Comece substituindo f<sup>-1</sup>(x) por y:<br>
+                y = (x - 2) / 3<br><br>
+                Troque x por y:<br>
+                x = (y - 2) / 3<br><br>
+                Isolando y:<br>
+                3x = y - 2<br>
+                y = 3x + 2<br><br>
+                Portanto, a função original é f(x) = 3x + 2
+                </code>
+            </details>
+
+            <h3>Questão 5</h3>
+            <p>Para a função modular <strong>f(x) = |3x + 6|</strong>, determine os valores de <strong>x</strong> para os quais <strong>f(x) = 9</strong>.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                Considere os dois casos:<br>
+                1. 3x + 6 = 9<br>
+                3x = 3<br>
+                x = 1<br><br>
+                2. -(3x + 6) = 9<br>
+                -3x - 6 = 9<br>
+                -3x = 15<br>
+                x = -5<br><br>
+                Portanto, os valores de x são 1 e -5
+                </code>
+            </details>
+
+            <h3>Questão 6</h3>
+            <p>Considere a função exponencial <strong>f(x) = 4<sup>x</sup></strong>. Determine o valor de <strong>x</strong> para o qual <strong>f(x) = 16</strong>.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                4<sup>x</sup> = 16<br>
+                4<sup>x</sup> = 4<sup>2</sup><br>
+                Portanto, x = 2
+                </code>
+            </details>
+
+            <h3>Questão 7</h3>
+            <p>Considere as funções <strong>f(x) = x<sup>2</sup> - 4x + 3</strong> e <strong>g(x) = x + 2</strong>. Determine os valores de <strong>x</strong> para os quais <strong>f(g(x)) = 0</strong>.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                Primeiro, substitua g(x) em f(x):<br>
+                f(g(x)) = f(x + 2)<br>
+                f(x + 2) = (x + 2)<sup>2</sup> - 4(x + 2) + 3<br>
+                f(x + 2) = x<sup>2</sup> + 4x + 4 - 4x - 8 + 3<br>
+                f(x + 2) = x<sup>2</sup> - 1<br><br>
+                Agora, resolva a equação f(x + 2) = 0:<br>
+                x<sup>2</sup> - 1 = 0<br>
+                x<sup>2</sup> = 1<br>
+                x = ±1<br><br>
+                Portanto, os valores de x são -1 e 1
+                </code>
+            </details>
+
+            <h3>Questão 8</h3>
+            <p>Seja <strong>f(x) = 2x<sup>3</sup> - 3x<sup>2</sup> + x - 5</strong>. Determine a função inversa <strong>f<sup>-1</sup>(x)</strong> para <strong>f(x) = 0</strong>.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                Para encontrar a inversa, substitua f(x) por y:<br>
+                y = 2x<sup>3</sup> - 3x<sup>2</sup> + x - 5<br><br>
+                Troque x por y:<br>
+                x = 2y<sup>3</sup> - 3y<sup>2</sup> + y - 5<br><br>
+                Isolando y é complexo, então use métodos numéricos ou gráficos para encontrar a inversa.<br>
+                Para f(x) = 0:<br>
+                2x<sup>3</sup> - 3x<sup>2</sup> + x - 5 = 0<br>
+                Use métodos de fatoração ou a fórmula de Cardano para resolver a equação cúbica.
+                </code>
+            </details>
+
+            <h3>Questão 9</h3>
+            <p>Considere a função modular <strong>f(x) = |x<sup>2</sup> - 4x + 3|</strong>. Determine os valores de <strong>x</strong> para os quais <strong>f(x) = 2</strong>.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                Considere os dois casos:<br>
+                1. x<sup>2</sup> - 4x + 3 = 2<br>
+                x<sup>2</sup> - 4x + 1 = 0<br>
+                Resolva a equação quadrática:<br>
+                x = [4 ± √(16 - 4)] / 2<br>
+                x = [4 ± √12] / 2<br>
+                x = [4 ± 2√3] / 2<br>
+                x = 2 ± √3<br><br>
+                2. -(x<sup>2</sup> - 4x + 3) = 2<br>
+                -x<sup>2</sup> + 4x - 3 = 2<br>
+                -x<sup>2</sup> + 4x - 5 = 0<br>
+                Resolva a equação quadrática:<br>
+                x = [4 ± √(16 + 20)] / 2<br>
+                x = [4 ± √36] / 2<br>
+                x = [4 ± 6] / 2<br>
+                x = 5 ou x = -1<br><br>
+                Portanto, os valores de x são 2 + √3, 2 - √3, 5 e -1
+                </code>
+            </details>
+
+            <h3>Questão 10</h3>
+            <p>Considere a função exponencial <strong>f(x) = 3<sup>x</sup> - 2</strong>. Determine o valor de <strong>x</strong> para o qual <strong>f(x) = 25</strong>.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Solução:</strong></p>
+                <code>
+                3<sup>x</sup> - 2 = 25<br>
+                3<sup>x</sup> = 27<br>
+                3<sup>x</sup> = 3<sup>3</sup><br>
+                Portanto, x = 3
+                </code>
+            </details>
+        </div>
+    </div>
+</body>
+</html>
