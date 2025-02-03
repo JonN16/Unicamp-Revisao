@@ -150,3 +150,41 @@ canvas {
     transform: rotate(-90deg);
     transform-origin: left center;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #0d6efd;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+.triangulo {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, transparent 50%, #3498db 50%);
+    margin: 20px 0;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+}

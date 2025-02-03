@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS_MATEMATICA/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+    <h1>Arcos de circuferencia</h1>
+    
+    <div class="box">
+        <h2>Arco de Circunferência</h2>
+
+        <h3>Definição</h3>
+        <p>Um arco de circunferência é qualquer porção de uma circunferência delimitada por dois pontos. Esses pontos são chamados de <strong>extremidades do arco</strong>.</p>
+
+        <h3>Elementos do Arco</h3>
+        <ul>
+            <li><strong>Pontos A e B</strong>: Dividem a circunferência e marcam os extremos do arco.</li>
+            <li><strong>Arco APB</strong>: Representa a parte da circunferência entre os pontos A e B, passando por um ponto intermediário P.</li>
+            <li><strong>Soma dos ângulos</strong>: A soma dos ângulos de um arco completo sempre será <strong>360°</strong>.</li>
+        </ul>
+
+        <h3>Fórmulas do Arco de Circunferência</h3>
+        <p>O comprimento do arco e sua medida em radianos são calculados por:</p>
+
+        <ul>
+            <li><strong>Comprimento da circunferência:</strong> <code>C = 2πr</code></li>
+            <li><strong>Comprimento do arco:</strong> <code>l = rθ</code> (onde θ está em radianos)</li>
+            <li><strong>Conversão entre graus e radianos:</strong> <code>θ (rad) = (θ° × π) / 180</code></li>
+        </ul>
+
+        <h3>Radiano</h3>
+        <p>O radiano é uma unidade de medida de ângulos baseada no raio da circunferência. Um arco correspondente a um ângulo de <strong>1 radiano</strong> tem um comprimento igual ao raio da circunferência.</p>
+    
+        <h3>Exemplo Prático</h3>
+        <p>Se o raio de uma circunferência é <strong>10 cm</strong> e o arco mede <strong>60°</strong>, o comprimento do arco será:</p>
+        <p>Primeiro, convertemos 60° para radianos:</p>
+        <p><code>θ = (60 × π) / 180 = π/3</code> radianos</p>
+        <p>Agora, aplicamos na fórmula do comprimento do arco:</p>
+        <p><code>l = 10 × (π/3) = (10π/3) cm ≈ 10,47 cm</code></p>
+
+        <h3>Conclusão</h3>
+        <p>O conceito de arco de circunferência é fundamental para cálculos geométricos e trigonométricos. A conversão entre graus e radianos e o uso das fórmulas para comprimento do arco são essenciais para a resolução de problemas envolvendo circunferências.</p>
+    </div>
+
+    <div class="box">
+        <h2>Trigonometria</h2>
+        <p>A trigonometria estuda as relações entre os ângulos e os lados de um triângulo retângulo.</p>
+
+        <div class="triangulo"></div>
+
+        <h3>Relações Trigonométricas</h3>
+        <p>As funções trigonométricas básicas são:</p>
+        <ul>
+            <li><strong>Seno</strong>: <code>sen θ = cateto oposto / hipotenusa</code></li>
+            <li><strong>Cosseno</strong>: <code>cos θ = cateto adjacente / hipotenusa</code></li>
+            <li><strong>Tangente</strong>: <code>tg θ = cateto oposto / cateto adjacente</code></li>
+        </ul>
+
+        <h3>Funções Trigonométricas Recíprocas</h3>
+        <p>Além de seno, cosseno e tangente, temos as funções recíprocas:</p>
+        <ul>
+            <li><strong>Cotangente</strong>: <code>cotg θ = 1 / tg θ = cateto adjacente / cateto oposto</code></li>
+            <li><strong>Secante</strong>: <code>sec θ = 1 / cos θ = hipotenusa / cateto adjacente</code></li>
+            <li><strong>Cossecante</strong>: <code>cosec θ = 1 / sen θ = hipotenusa / cateto oposto</code></li>
+        </ul>
+
+        <h3>Teorema de Pitágoras</h3>
+        <p>O Teorema de Pitágoras estabelece que, em um triângulo retângulo:</p>
+        <p><code>hipotenusa² = cateto₁² + cateto₂²</code></p>
+
+        <h3>Relações Fundamentais</h3>
+        <p>As identidades trigonométricas fundamentais são:</p>
+        <ul>
+            <li><code>sen² θ + cos² θ = 1</code></li>
+            <li><code>1 + tg² θ = sec² θ</code></li>
+            <li><code>1 + cotg² θ = cosec² θ</code></li>
+        </ul>
+
+        <h3>Valores Trigonométricos para Ângulos Notáveis</h3>
+        <table>
+            <tr>
+                <th>Ângulo</th>
+                <th>Sen</th>
+                <th>Cos</th>
+                <th>Tg</th>
+                <th>Cotg</th>
+                <th>Sec</th>
+                <th>Cosec</th>
+            </tr>
+            <tr>
+                <td>30°</td>
+                <td>1/2</td>
+                <td>√3/2</td>
+                <td>√3/3</td>
+                <td>√3</td>
+                <td>2/√3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>45°</td>
+                <td>√2/2</td>
+                <td>√2/2</td>
+                <td>1</td>
+                <td>1</td>
+                <td>√2</td>
+                <td>√2</td>
+            </tr>
+            <tr>
+                <td>60°</td>
+                <td>√3/2</td>
+                <td>1/2</td>
+                <td>√3</td>
+                <td>√3/3</td>
+                <td>2</td>
+                <td>2/√3</td>
+            </tr>
+        </table>
+
+        <h3>Conversão entre Graus e Radianos</h3>
+        <ul>
+            <li><code>θ (rad) = (θ° × π) / 180</code></li>
+            <li><code>θ (graus) = (θ (rad) × 180) / π</code></li>
+        </ul>
+
+        <h3>Lei dos Senos</h3>
+        <p>A relação entre os lados e os ângulos de qualquer triângulo:</p>
+        <p><code>a / sen A = b / sen B = c / sen C</code></p>
+
+        <h3>Lei dos Cossenos</h3>
+        <p>Usada para encontrar lados ou ângulos de triângulos que não são retângulos:</p>
+        <p><code>c² = a² + b² - 2ab cos C</code></p>
+    </div>
+
+    <div class="box">
+        <h2>Arcos Trigonométricos Congruentes</h2>
+        <p>Dois arcos trigonométricos são chamados de <strong>congruentes</strong> quando possuem a mesma posição no círculo trigonométrico, ou seja, diferem por um número inteiro de voltas completas.</p>
+
+        <h3>Fórmula Geral</h3>
+        <p>Um arco <strong>α</strong> é congruente a outro arco se:</p>
+        <ul>
+            <li>Em <strong>graus</strong>: <code>α + k × 360°</code></li>
+            <li>Em <strong>radianos</strong>: <code>α + k × 2π</code></li>
+        </ul>
+        <p>Onde <strong>k</strong> é um número inteiro.</p>
+
+        <h3>Exemplos de Arcos Congruentes</h3>
+        <ul>
+            <li>Se <strong>α = 30°</strong>, então arcos congruentes a ele são: <br>
+                <code>30°, 390°, -330°, 750°, -690°...</code>
+            </li>
+            <li>Se <strong>α = π/4</strong>, então arcos congruentes a ele são: <br>
+                <code>π/4, 9π/4, -7π/4, 17π/4...</code>
+            </li>
+        </ul>
+
+        <h3>Como Encontrar um Arco Congruente no Intervalo de 0° a 360°</h3>
+        <p>Se um arco for maior que 360° ou menor que 0°, basta <strong>somar ou subtrair múltiplos de 360°</strong> até que ele fique dentro desse intervalo.</p>
+        <ul>
+            <li><strong>Exemplo 1:</strong> Dado <strong>α = 890°</strong>, encontramos o arco congruente dentro de 0° a 360°: <br>
+                <code>890° - 2 × 360° = 170°</code> → Arco congruente: <strong>170°</strong>
+            </li>
+            <li><strong>Exemplo 2:</strong> Dado <strong>α = -200°</strong>, somamos 360°: <br>
+                <code>-200° + 360° = 160°</code> → Arco congruente: <strong>160°</strong>
+            </li>
+        </ul>
+
+        <h3>Como Encontrar um Arco Congruente no Intervalo de 0 a 2π</h3>
+        <p>O mesmo processo pode ser aplicado em <strong>radianos</strong>, somando ou subtraindo múltiplos de <strong>2π</strong>.</p>
+        <ul>
+            <li><strong>Exemplo 1:</strong> Para <strong>α = 13π/4</strong>, reduzimos ao intervalo de 0 a 2π: <br>
+                <code>13π/4 - 2π = 5π/4</code> → Arco congruente: <strong>5π/4</strong>
+            </li>
+            <li><strong>Exemplo 2:</strong> Para <strong>α = -3π/2</strong>, somamos 2π: <br>
+                <code>-3π/2 + 2π = π/2</code> → Arco congruente: <strong>π/2</strong>
+            </li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Função Seno</h2>
+        <p>A função seno é uma função trigonométrica fundamental que descreve uma relação entre um ângulo de um triângulo retângulo e as razões entre seus lados. Ela é amplamente utilizada na matemática, física e engenharia.</p>
+    
+        <h3>Definição Matemática</h3>
+        <p>A função seno é definida como:</p>
+        <p><strong>y = sen(x)</strong></p>
+        <p>Isso significa que para cada valor de <strong>x</strong>, o seno retorna um valor correspondente baseado na posição de um ponto no círculo unitário.</p>
+    
+        <h3>Propriedades Importantes</h3>
+        <ul>
+            <li><strong>Domínio:</strong> O conjunto dos números reais <strong>ℝ</strong>, pois a função seno está definida para todos os valores de <strong>x</strong>.</li>
+            <li><strong>Imagem:</strong> O intervalo <strong>[-1, 1]</strong>, pois o seno nunca assume valores fora dessa faixa.</li>
+            <li><strong>Período:</strong> <strong>P = 2π</strong>, ou seja, a função se repete a cada <strong>2π</strong> unidades.</li>
+            <li><strong>Raízes:</strong> <strong>x = kπ</strong>, onde <strong>k</strong> é um número inteiro, ou seja, a função seno se anula para múltiplos de <strong>π</strong>.</li>
+            <li><strong>Pontos Notáveis:</strong></li>
+            <ul>
+                <li><code>sen(0) = 0</code></li>
+                <li><code>sen(π/2) = 1</code></li>
+                <li><code>sen(π) = 0</code></li>
+                <li><code>sen(3π/2) = -1</code></li>
+                <li><code>sen(2π) = 0</code></li>
+            </ul>
+        </ul>
+    
+        <h3>Gráfico da Função Seno</h3>
+        <p>A função seno apresenta um comportamento ondulatório, oscilando entre -1 e 1, passando pelos valores notáveis mencionados acima.</p>
+    
+        <img src="img/sinal-funcao-seno.webp" alt="">
+        <div class="seno"></div>
+        <canvas id="sineChart" width="600" height="400"></canvas>
+    </div>
+
+    <div class="box">
+        <h2>Função Cosseno</h2>
+
+        <h3>Definição Matemática</h3>
+        <p>A função cosseno é uma função trigonométrica fundamental definida como:</p>
+        <p><strong>y = cos(x)</strong></p>
+        <p>Ela relaciona um ângulo de um triângulo retângulo com a razão entre o cateto adjacente e a hipotenusa.</p>
+    
+        <h3>Propriedades Importantes</h3>
+        <ul>
+            <li><strong>Domínio:</strong> <strong>ℝ</strong> (conjunto de todos os números reais), pois a função está definida para qualquer valor de <strong>x</strong>.</li>
+            <li><strong>Imagem:</strong> <strong>[-1,1]</strong>, ou seja, o cosseno nunca assume valores fora desse intervalo.</li>
+            <li><strong>Período:</strong> <strong>P = 2π</strong>, o que significa que a função se repete a cada <strong>2π</strong> unidades.</li>
+            <li><strong>Raízes:</strong> <strong>x = π/2 + kπ</strong>, onde <strong>k</strong> é um número inteiro. O cosseno se anula em múltiplos ímpares de <strong>π/2</strong>.</li>
+            <li><strong>Pontos Notáveis:</strong></li>
+            <ul>
+                <li><code>cos(0) = 1</code></li>
+                <li><code>cos(π/2) = 0</code></li>
+                <li><code>cos(π) = -1</code></li>
+                <li><code>cos(3π/2) = 0</code></li>
+                <li><code>cos(2π) = 1</code></li>
+            </ul>
+        </ul>
+    
+        <h3>Diferenças entre Seno e Cosseno</h3>
+        <ul>
+            <li>O <strong>cosseno</strong> começa em <strong>1</strong>, enquanto o <strong>seno</strong> começa em <strong>0</strong>.</li>
+            <li>A curva do cosseno é uma translação da curva do seno, deslocada horizontalmente em <code>π/2</code> para a esquerda.</li>
+        </ul>
+    
+        <h3>Gráfico da Função Cosseno</h3>
+        <p>Assim como a função seno, o cosseno tem um comportamento ondulatório, oscilando entre -1 e 1.</p>
+    
+        <img src="img/sinal-funcao-cosseno.webp" alt="">
+        <div class="cos"></div>
+        <canvas id="cosineChart" width="600" height="400"></canvas>
+    </div>
+
+    <div class="box">
+        <h2>Função Tangente</h2>
+
+        <h3>Definição Matemática</h3>
+        <p>A função tangente é uma função trigonométrica definida como:</p>
+        <p><strong>tg(x) = tan(x) = <code>sin(x) / cos(x)</code></strong></p>
+        <p>Ou seja, a tangente de um ângulo é a razão entre o seno e o cosseno desse ângulo.</p>
+    
+        <h3>Propriedades Importantes</h3>
+        <ul>
+            <li><strong>Domínio:</strong> A função tangente está definida para todos os valores de <strong>x</strong>, exceto para <strong>x = π/2 + kπ</strong>, onde <strong>k</strong> é um número inteiro, pois nesses pontos o cosseno se anula e a tangente torna-se indefinida.</li>
+            <li><strong>Imagem:</strong> <strong>ℝ</strong>, ou seja, a tangente pode assumir qualquer valor real.</li>
+            <li><strong>Período:</strong> <strong>P = π</strong>, o que significa que a função se repete a cada <strong>π</strong> unidades.</li>
+            <li><strong>Assíntotas verticais:</strong> As assíntotas verticais ocorrem em <strong>x = π/2 + kπ</strong>, onde <strong>k</strong> é um número inteiro.</li>
+            <li><strong>Pontos Notáveis:</strong></li>
+            <ul>
+                <li><code>tan(0) = 0</code></li>
+                <li><code>tan(π/4) = 1</code></li>
+                <li><code>tan(π/2)</code> é indefinido (assíntota vertical)</li>
+                <li><code>tan(π) = 0</code></li>
+                <li><code>tan(3π/4) = -1</code></li>
+                <li><code>tan(2π) = 0</code></li>
+            </ul>
+        </ul>
+    
+        <h3>Gráfico da Função Tangente</h3>
+        <p>O gráfico da função tangente tem um comportamento cíclico, com assíntotas verticais onde o cosseno se anula e a tangente vai para <strong>±∞</strong>. A tangente cruza o eixo <strong>y</strong> (ou <strong>x = 0</strong>) em <strong>0</strong> e se repete a cada <strong>π</strong> unidades.</p>
+        
+        <h3>Propriedades Visuais</h3>
+        <p>A tangente é semelhante ao seno, mas com um comportamento mais "agudo" e com assíntotas verticais. A cada <strong>π</strong> unidades, o gráfico passa por uma assimptota vertical, indo de <strong>∞</strong> a <strong>-∞</strong>.</p>
+        
+        <h3>Relacionamento com o Círculo Trigonométrico</h3>
+        <p>A tangente está relacionada com o círculo trigonométrico de forma que, para um determinado ângulo <strong>x</strong>, o valor de <strong>tan(x)</strong> pode ser interpretado como a razão entre as coordenadas <strong>y/x</strong> de um ponto na circunferência. Em outras palavras, o valor da tangente é dado pela altura do ponto no círculo dividido pela sua coordenada horizontal.</p>
+        <img src="img/tag.webp" alt="">
+    </div>
+      
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function createChart(chartId, chartLabel, chartData, chartBorderColor, vertexPoint) {
+                const ctx = document.getElementById(chartId).getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['-3π', '-2π', '-π', '0', 'π', '2π', '3π'],
+                        datasets: [{
+                            label: chartLabel,
+                            data: chartData,
+                            borderColor: chartBorderColor,
+                            borderWidth: 2,
+                            fill: false,
+                            pointBackgroundColor: function(context) {
+                                const index = context.dataIndex;
+                                const value = context.dataset.data[index];
+                                return value === vertexPoint ? 'red' : chartBorderColor;
+                            },
+                            pointRadius: function(context) {
+                                const index = context.dataIndex;
+                                const value = context.dataset.data[index];
+                                return value === vertexPoint ? 6 : 3;
+                            }
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: chartLabel
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Valor de X'
+                                },
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Valor de f(x) ou Y'
+                                },
+                                grid: {
+                                    color: (ctx) => ctx.tick.value === 0 ? 'rgba(0, 0, 0, 1)' : 'rgba(200, 200, 200, 0.3)', // Linha Y mais escura no 0
+                                    lineWidth: (ctx) => ctx.tick.value === 0 ? 2 : 0.5, // Espessura maior no 0
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            const sineData = [-1, 0, 1, 0, -1, 0, 1];
+            createChart('sineChart', 'Função Seno', sineData, '#0d6efd', 1);
+
+            const cosineData = [0, -1, 0, 1, 0, -1, 0];
+            createChart('cosineChart', 'Função Cosseno', cosineData, '#dc3545', 1);
+        });
+    </script>
+
+    <div class="box">
+        <h2>Questões</h2>
+
+        <h3>Questão 1 (Adaptada)</h3>
+        <p>Calcule o comprimento de um arco de circunferência de raio 5 cm e ângulo central de 45°.</p>
+        <details>
+            <summary>Ver Resposta</summary>
+            <code>
+            <p><strong>Resolução:</strong></p>
+            <p>Primeiro, convertemos 45° para radianos:</p>
+            <p><code>θ = (45 × π) / 180 = π/4</code> radianos</p>
+            <p>Agora, aplicamos na fórmula do comprimento do arco:</p>
+            <p><code>l = rθ = 5 × (π/4) = (5π/4) cm ≈ 3,93 cm</code></p>
+            <p><strong>Resposta:</strong> O comprimento do arco é aproximadamente 3,93 cm.</p>
+            </code>
+        </details>
+
+        <h3>Questão 2 (Adaptada)</h3>
+        <p>Determine o ângulo central em radianos de um arco de comprimento 8 cm em uma circunferência de raio 4 cm.</p>
+        <details>
+            <summary>Ver Resposta</summary>
+            <code>
+            <p><strong>Resolução:</strong></p>
+            <p>Usamos a fórmula do comprimento do arco:</p>
+            <p><code>l = rθ</code></p>
+            <p>Substituímos os valores conhecidos:</p>
+            <p><code>8 = 4θ</code></p>
+            <p>Resolvendo para θ:</p>
+            <p><code>θ = 8 / 4 = 2</code> radianos</p>
+            <p><strong>Resposta:</strong> O ângulo central é 2 radianos.</p>
+            </code>
+        </details>
+
+        <h3>Questão 3 (Adaptada)</h3>
+        <p>Converta 120° para radianos.</p>
+        <details>
+            <summary>Ver Resposta</summary>
+            <code>
+            <p><strong>Resolução:</strong></p>
+            <p>Usamos a fórmula de conversão:</p>
+            <p><code>θ (rad) = (θ° × π) / 180</code></p>
+            <p>Substituímos 120°:</p>
+            <p><code>θ = (120 × π) / 180 = 2π/3</code> radianos</p>
+            <p><strong>Resposta:</strong> 120° é igual a 2π/3 radianos.</p>
+            </code>
+        </details>
+
+        <h3>Questão 4 (Adaptada)</h3>
+        <p>Se o comprimento de uma circunferência é 20π cm, qual é o raio da circunferência?</p>
+        <details>
+            <summary>Ver Resposta</summary>
+            <code>
+            <p><strong>Resolução:</strong></p>
+            <p>Usamos a fórmula do comprimento da circunferência:</p>
+            <p><code>C = 2πr</code></p>
+            <p>Substituímos o comprimento conhecido:</p>
+            <p><code>20π = 2πr</code></p>
+            <p>Resolvendo para r:</p>
+            <p><code>r = 20π / 2π = 10</code> cm</p>
+            <p><strong>Resposta:</strong> O raio da circunferência é 10 cm.</p>
+            </code>
+        </details>
+
+        <h3>Questão 5 (Adaptada)</h3>
+        <p>Calcule o comprimento de um arco de circunferência de raio 7 cm e ângulo central de 90°.</p>
+        <details>
+            <summary>Ver Resposta</summary>
+            <code>
+            <p><strong>Resolução:</strong></p>
+            <p>Primeiro, convertemos 90° para radianos:</p>
+            <p><code>θ = (90 × π) / 180 = π/2</code> radianos</p>
+            <p>Agora, aplicamos na fórmula do comprimento do arco:</p>
+            <p><code>l = rθ = 7 × (π/2) = (7π/2) cm ≈ 11 cm</p>
+            <p><strong>Resposta:</strong> O comprimento do arco é aproximadamente 11 cm.</p>
+            </code>
+        </details>
+
+        <h3>Questão 6 (Adaptada)</h3>
+        <p>Calcule o valor de sen(π/6).</p>
+        <details>
+            <summary>Ver Resposta</summary>
+            <code>
+            <p><strong>Resolução:</strong></p>
+            <p>Usamos a tabela de valores trigonométricos notáveis:</p>
+            <p>sen(π/6) = 1/2</p>
+            <p><strong>Resposta:</strong> sen(π/6) = 1/2</p>
+            </code>
+        </details>
+
+        <h3>Questão 7 (Adaptada)</h3>
+        <p>Determine o valor de cos(π/3).</p>
+        <details>
+            <summary>Ver Resposta</summary>
+            <code>
+            <p><strong>Resolução:</strong></p>
+            <p>Usamos a tabela de valores trigonométricos notáveis:</p>
+            <p>cos(π/3) = 1/2</p>
+            <p><strong>Resposta:</strong> cos(π/3) = 1/2</p>
+            </code>
+        </details>
+
+        <h3>Questão 8 (Adaptada)</h3>
+        <p>Calcule o valor de tg(π/4).</p>
+        <details>
+            <summary>Ver Resposta</summary>
+            <code>
+            <p><strong>Resolução:</strong></p>
+            <p>Usamos a tabela de valores trigonométricos notáveis:</p>
+            <p>tg(π/4) = 1</p>
+            <p><strong>Resposta:</strong> tg(π/4) = 1</p>
+            </code>
+        </details>
+
+        <h3>Questão 9 (Adaptada)</h3>
+        <p>Determine o valor de sec(π/6).</p>
+        <details>
+            <summary>Ver Resposta</summary>
+            <code>
+            <p><strong>Resolução:</strong></p>
+            <p>Usamos a relação sec(θ) = 1/cos(θ):</p>
+            <p>sec(π/6) = 1/cos(π/6) = 2/√3</p>
+            <p><strong>Resposta:</strong> sec(π/6) = 2/√3</p>
+            </code>
+        </details>
+
+        <h3>Questão 10 (Adaptada)</h3>
+        <p>Calcule o valor de cosec(π/3).</p>
+        <details>
+            <summary>Ver Resposta</summary>
+            <code>
+            <p><strong>Resolução:</strong></p>
+            <p>Usamos a relação cosec(θ) = 1/sen(θ):</p>
+            <p>cosec(π/3) = 1/sen(π/3) = 2/√3</p>
+            <p><strong>Resposta:</strong> cosec(π/3) = 2/√3</p>
+            </code>
+        </details>
+    </div>
+</div>
+</body>
+</html>

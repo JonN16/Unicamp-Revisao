@@ -1,21 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Localização Geográfica</title>
+    <link rel="stylesheet" href="CSS_GEOGRAFIA/style.css">
 </head>
 <body>
-    <h1>Orientação e Localização no espaço</h1>
-    <h3>Rodas dos ventos</h3>
-    L,O,S,N
-    Se,So,No,Ne
-    Ses...
-    <h3>O endereço de algo em um ponto no espaço geografico</h3>
-    <h3>Meridianos = Greenwich = longitude = 180</h3>
-    <div id="Meridianos"></div>
-    <h3>Paralelas = Equador = latitude = 90</h3>
-    <div id="Paralelas"></div>
-    <h3>Fusos horarios a partir de Greenwich L = +1 O = -1</h3>
+    <div class="container">
+        <div class="box">
+            <h1>Orientação e Localização no Espaço Geográfico</h1>
+        </div>
+
+        <!-- Rosa dos Ventos -->
+        <div class="box">
+            <h2>Rosa dos Ventos</h2>
+            <p>A Rosa dos Ventos é uma representação simbólica que indica as direções principais e secundárias no espaço geográfico. Ela é usada para orientar a localização de lugares no mapa.</p>
+            <p>As direções principais são:</p>
+            <ul>
+                <li><strong>L:</strong> Leste</li>
+                <li><strong>O:</strong> Oeste</li>
+                <li><strong>N:</strong> Norte</li>
+                <li><strong>S:</strong> Sul</li>
+            </ul>
+            <p>As direções secundárias são:</p>
+            <ul>
+                <li><strong>NE:</strong> Nordeste</li>
+                <li><strong>NO:</strong> Noroeste</li>
+                <li><strong>SE:</strong> Sudeste</li>
+                <li><strong>SO:</strong> Sudoeste</li>
+            </ul>
+            <p>Além das direções principais e secundárias, existem também as direções terciárias, que são combinações das direções secundárias, como ENE (Lés-Nordeste) e SSE (Sul-Sudeste).</p>
+        </div>
+
+        <!-- Endereço de Algo no Espaço -->
+        <div class="box">
+            <h2>Localização de um Ponto no Espaço Geográfico</h2>
+            <p>Para localizar qualquer ponto na superfície terrestre, usamos as coordenadas geográficas, compostas por:</p>
+            <ul>
+                <li><strong>Latitude:</strong> Distância em relação à Linha do Equador (horizontal).</li>
+                <li><strong>Longitude:</strong> Distância em relação ao Meridiano de Greenwich (vertical).</li>
+            </ul>
+            <p>As coordenadas geográficas são expressas em graus (°), minutos (') e segundos ("). Por exemplo, a cidade de São Paulo está localizada aproximadamente a 23°33' S de latitude e 46°38' O de longitude.</p>
+        </div>
+
+        <!-- Meridianos -->
+        <div class="box">
+            <h3>Meridianos e Longitude</h3>
+            <p>Os meridianos são linhas imaginárias que vão do Pólo Norte ao Pólo Sul, dividindo o planeta em fusos horários. O Meridiano de Greenwich, localizado na Inglaterra, é o meridiano de referência, com longitude 0°.</p>
+            <p>O meridiano de 180° é o oposto, conhecido como linha de data internacional, onde ocorre a mudança de data.</p>
+        </div>
+
+        <div id="Meridianos" class="box">
+            <p>Meridiano de Greenwich (0°) divide a Terra em duas partes: o Hemisfério Ocidental e o Hemisfério Oriental. A longitude de 180° está no lado oposto, e a diferença entre eles determina os fusos horários.</p>
+        </div>
+        <div class="meio">
+            <div class="map">
+                <svg width="300" height="300">
+                    <circle cx="150" cy="150" r="140" fill="#e8f5e9" />
+                    <line x1="150" y1="10" x2="150" y2="290" class="longitude" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Paralelos -->
+        <div class="box">
+            <h3>Paralelos e Latitude</h3>
+            <p>Os paralelos são linhas imaginárias que correm de leste a oeste e são usadas para medir a latitude. O Equador, que é o paralelo de 0°, divide a Terra em dois hemisférios: Hemisfério Norte e Hemisfério Sul.</p>
+            <p>A latitude varia de 0° no Equador até 90° nos polos, sendo positiva no Hemisfério Norte e negativa no Hemisfério Sul.</p>
+        </div>
+        <div class="meio">
+            <div class="map">
+                <svg width="300" height="300">
+                    <circle cx="150" cy="150" r="140" fill="#e8f5e9" />
+                    <line x1="10" y1="150" x2="290" y2="150" class="latitude" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Fusos Horários -->
+        <div class="box">
+            <h3>Fusos Horários e Greenwich</h3>
+            <p>A Terra é dividida em 24 fusos horários, cada um correspondente a 15° de longitude. O fuso horário de referência é o de Greenwich (GMT), e os fusos variam conforme a posição a leste ou oeste do Meridiano de Greenwich.</p>
+            <ul>
+                <li><strong>Leste:</strong> +1, +2, +3... até +12 (para cada fuso horário a leste de Greenwich).</li>
+                <li><strong>Oeste:</strong> -1, -2, -3... até -12 (para cada fuso horário a oeste de Greenwich).</li>
+            </ul>
+        </div>
+
+        <!-- Cartografia -->
+        <div class="box">
+            <h2>Cartografia: Arte e Ciência</h2>
+            <p>A cartografia é a ciência e a arte de criar mapas, que são representações gráficas de uma área ou região geográfica. Ela envolve o uso de escalas, legendas e outros elementos para representar o espaço de forma precisa e compreensível.</p>
+        </div>
+        <div class="box">
+            <h3>Elementos de um Mapa</h3>
+            <p>Os mapas incluem diversos elementos importantes para sua compreensão:</p>
+            <ul>
+                <li><strong>Título:</strong> Indica o tema do mapa.</li>
+                <li><strong>Legenda:</strong> Explica os símbolos usados no mapa.</li>
+                <li><strong>Escala:</strong> Relaciona a distância no mapa com a distância real.</li>
+                <li><strong>Fonte:</strong> Indica a origem dos dados usados no mapa.</li>
+                <li><strong>Espaço Representado:</strong> Área geográfica representada no mapa.</li>
+            </ul>
+            <h3>Tipos de Mapas</h3>
+            <p>Os mapas podem ser classificados de acordo com a informação que transmitem:</p>
+            <ul>
+                <li><strong>Mapa Quantitativo:</strong> Mostra dados numéricos, como população ou produção agrícola.</li>
+                <li><strong>Mapa Qualitativo:</strong> Mostra características qualitativas, como tipos de vegetação ou uso do solo.</li>
+                <li><strong>Mapa Anamorfose:</strong> Mapa que distorce as áreas geográficas com base em um dado específico, como o número de habitantes.</li>
+            </ul>
+        </div>
+
+        <!-- Legendas e Isolinhas -->
+        <div class="box">
+            <h2>Legendas e Isolinhas</h2>
+            <h3>Legendas</h3>
+            <p>A legenda é essencial para a interpretação do mapa, explicando os símbolos, cores e escalas. Exemplos de elementos representados em legendas incluem:</p>
+            <ul>
+                <li><strong>Símbolos:</strong> Representações gráficas de objetos ou fenômenos.</li>
+                <li><strong>Ícones:</strong> Representações simplificadas de objetos.</li>
+                <li><strong>Setas:</strong> Indicam direções e sentidos.</li>
+            </ul>
+            <h3>Isolinhas</h3>
+            <p>Isolinhas são linhas que conectam pontos de igual valor em um mapa. Existem vários tipos:</p>
+            <ul>
+                <li><strong>Isoípsas:</strong> Linhas de igual altura no relevo (altitude).</li>
+                <li><strong>Isobatas:</strong> Linhas de igual profundidade em corpos d'água.</li>
+                <li><strong>Isóbaras:</strong> Linhas de igual pressão atmosférica.</li>
+            </ul>
+        </div>
+
+        <!-- Projeções Cartográficas -->
+        <div class="box">
+            <h2>Projeções Cartográficas</h2>
+            <p>As projeções cartográficas são técnicas para representar a superfície esférica da Terra em um plano. Como a Terra é uma esfera, qualquer projeção implica em distorções em áreas, formas, distâncias ou direções.</p>
+            <ul>
+                <li><strong>Cilíndrica:</strong> Projeção baseada em um cilindro, distorcendo áreas próximas aos polos.</li>
+                <li><strong>Cônica:</strong> Projeção baseada em um cone, ideal para áreas de latitudes médias.</li>
+                <li><strong>Azimutal:</strong> Projeção que utiliza um plano tangente à Terra, útil para representar áreas próximas aos polos.</li>
+                <li><strong>Conforme (Forma):</strong> Projeções que mantêm a forma, mas podem distorcer áreas.</li>
+                <li><strong>Equivalente (Proporção):</strong> Projeções que mantêm a proporção das áreas.</li>
+                <li><strong>Equidistante (Distância):</strong> Projeções que mantêm distâncias em certos pontos ou linhas.</li>
+                <li><strong>Azimutal (Direção):</strong> Projeções que preservam as direções a partir de um ponto central.</li>
+            </ul>
+        </div>
+
+        <!-- Escalas Geográficas -->
+        <div class="box">
+            <h2>Escalas Geográficas</h2>
+            <p>Escalas geográficas são a relação entre a distância no mapa e a distância real no terreno. Existem dois tipos principais de escala:</p>
+            <ul>
+                <li><strong>Escala Gráfica:</strong> Representação visual da escala em forma de linha.</li>
+                <li><strong>Escala Numérica:</strong> Expressa a escala em forma de fração ou razão (por exemplo, 1:100.000).</li>
+            </ul>
+            <p>Fórmula da escala: <strong>D = E.e</strong>, onde <strong>D</strong> é a distância real, <strong>E</strong> é a escala e <strong>e</strong> é a distância no mapa.</p>
+        </div>
+
+        <div class="box">
+            <h2>Perguntas</h2>
+
+            <h3>Questão 1</h3>
+            <p>A Rosa dos Ventos é uma representação gráfica que indica as principais direções no espaço geográfico. Ela é comumente utilizada em mapas e cartas. A partir dessa representação, podemos afirmar que:</p>
+            <ul>
+                <li>a) A Rosa dos Ventos divide a Terra em 360 regiões, uma para cada grau de longitude.</li>
+                <li>b) As direções intermediárias, como nordeste e sudoeste, não são essenciais para a orientação, sendo menos precisas que as direções cardeais.</li>
+                <li>c) A Rosa dos Ventos é utilizada para localizar cidades no mapa, mas não serve para indicar as direções.</li>
+                <li>d) As direções cardeais (Norte, Sul, Leste e Oeste) são as mais importantes na orientação geográfica, enquanto as direções intermediárias ajudam a melhorar a precisão da localização.</li>
+                <li>e) O uso da Rosa dos Ventos está obsoleto devido aos avanços tecnológicos no sistema de navegação por satélite (GPS).</li>
+            </ul>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Resposta:</strong> d) As direções cardeais (Norte, Sul, Leste e Oeste) são as mais importantes na orientação geográfica, enquanto as direções intermediárias ajudam a melhorar a precisão da localização.</p>
+                <p><strong>Explicação:</strong> A Rosa dos Ventos é essencial para a orientação, com as direções cardeais sendo fundamentais para a localização. As direções intermediárias (como nordeste, sudoeste, etc.) ajudam a refinar essa orientação, proporcionando maior precisão, mas não são essenciais como as direções cardeais. Com o avanço tecnológico, como o GPS, a necessidade de utilizar a Rosa dos Ventos diminuiu, mas ela ainda é importante para o entendimento da orientação geográfica.</p>
+            </details>
+
+            <h3>Questão 2</h3>
+            <p>Considerando o uso das coordenadas geográficas para a localização de um ponto na superfície terrestre, assinale a alternativa correta:</p>
+            <ul>
+                <li>a) A longitude e a latitude têm as mesmas unidades de medida, e ambas são expressas em graus.</li>
+                <li>b) A latitude é medida de 0° a 90° para o norte e para o sul, enquanto a longitude varia de 0° a 180° para o leste e oeste.</li>
+                <li>c) A longitude é medida em relação ao Meridiano de Greenwich e a latitude em relação ao Equador.</li>
+                <li>d) A longitude é uma linha que indica a distância entre os Pólos Norte e Sul, enquanto a latitude indica a distância entre os continentes.</li>
+                <li>e) A latitude varia de 0° a 360°, enquanto a longitude varia de 0° a 180°.</li>
+            </ul>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Resposta:</strong> c) A longitude é medida em relação ao Meridiano de Greenwich e a latitude em relação ao Equador.</p>
+                <p><strong>Explicação:</strong> A Terra é dividida em linhas de latitude e longitude, que são usadas para localizar pontos no planeta. A latitude é medida em relação ao Equador, variando de 0° a 90° para o norte e para o sul. A longitude é medida em relação ao Meridiano de Greenwich, com valores que vão de 0° a 180° tanto para o leste quanto para o oeste.</p>
+            </details>
+
+            <h3>Questão 3</h3>
+            <p>A partir da análise da seguinte questão, é possível afirmar que a definição de fusos horários ao redor do planeta tem como base:</p>
+            <ul>
+                <li>a) O número de continentes e oceanos atravessados pelos meridianos.</li>
+                <li>b) O alinhamento das estações do ano e o movimento da Terra em torno do Sol.</li>
+                <li>c) O movimento de rotação da Terra, com base na divisão do planeta em 24 fusos horários.</li>
+                <li>d) O formato da Terra, que é dividido igualmente entre zonas tropicais e temperadas.</li>
+                <li>e) A divisão do planeta em regiões geográficas que pertencem a diferentes hemisférios.</li>
+            </ul>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Resposta:</strong> c) O movimento de rotação da Terra, com base na divisão do planeta em 24 fusos horários.</p>
+                <p><strong>Explicação:</strong> Os fusos horários são definidos com base no movimento de rotação da Terra, que leva 24 horas para completar uma volta. A Terra é dividida em 24 fusos horários, com cada um representando uma hora de diferença. Essa divisão segue os meridianos de 15°, correspondendo ao tempo necessário para o planeta dar uma volta completa, considerando sua rotação.</p>
+            </details>
+
+            <h3>Questão 4</h3>
+            <p>Considerando a definição e a importância do Meridiano de Greenwich, é correto afirmar que:</p>
+            <ul>
+                <li>a) O Meridiano de Greenwich é um dos paralelos que ajudam na medição da longitude, sendo referência para a criação dos fusos horários.</li>
+                <li>b) O Meridiano de Greenwich é a linha de latitude que divide o planeta em hemisfério Norte e hemisfério Sul.</li>
+                <li>c) O Meridiano de Greenwich serve para determinar a posição de cidades em relação ao Equador, mas não tem relação com a longitude.</li>
+                <li>d) O Meridiano de Greenwich é considerado o meridiano de referência para medir a longitude, com valor de 0°.</li>
+                <li>e) O Meridiano de Greenwich divide a Terra em dois hemisférios leste e oeste, mas não é utilizado na definição de fusos horários.</li>
+            </ul>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Resposta:</strong> d) O Meridiano de Greenwich é considerado o meridiano de referência para medir a longitude, com valor de 0°.</p>
+                <p><strong>Explicação:</strong> O Meridiano de Greenwich é o meridiano de referência para medir a longitude, estabelecendo o valor 0°. Ele divide o planeta em dois hemisférios: leste e oeste. Esse meridiano é crucial para a definição dos fusos horários, e sua posição determina a diferença de tempo entre os lugares ao redor do mundo.</p>
+            </details>
+
+            <h3>Questão 5</h3>
+            <p>Os paralelos desempenham um papel importante na geografia, pois são responsáveis pela medição da latitude. Assinale a alternativa correta:</p>
+            <ul>
+                <li>a) O Equador é o paralelo de 90°, e é usado para medir a distância até os polos.</li>
+                <li>b) A latitude é a medida que indica a distância angular entre o ponto e o Meridiano de Greenwich.</li>
+                <li>c) Os paralelos são linhas imaginárias que cortam a Terra de norte a sul e ajudam a medir a longitude.</li>
+                <li>d) O Equador, com latitude 0°, é o paralelo de referência para medir a latitude.</li>
+                <li>e) A latitude é medida de 0° a 360°, e os paralelos ajudam a calcular a longitude.</li>
+            </ul>
+            <details>
+                <summary>Ver Resposta</summary>
+                <p><strong>Resposta:</strong> d) O Equador, com latitude 0°, é o paralelo de referência para medir a latitude.</p>
+                <p><strong>Explicação:</strong> Os paralelos são linhas imaginárias que cortam a Terra de leste a oeste, sendo o Equador o paralelo de 0°, que serve como referência para medir a latitude. A latitude varia entre 0° (no Equador) e 90° (nos polos). Já a longitude, que mede a distância em relação ao Meridiano de Greenwich, é usada para determinar a posição leste-oeste.</p>
+            </details>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS_MATEMATICA/style.css">
+    <title>Logaritmos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Logaritmos</h1>
+
+        <div class="box">
+            <h2>Definição de Logaritmo</h2>
+            <p>O logaritmo é a operação inversa da exponenciação. A definição de logaritmo é dada por:</p>
+            <p><strong>log<sub>a</sub>B = X</strong>, onde:</p>
+            <ul>
+                <li><strong>a</strong> = base do logaritmo</li>
+                <li><strong>B</strong> = logaritmando (o número sobre o qual se realiza a operação)</li>
+                <li><strong>X</strong> = logaritmo, o número que indica o expoente</li>
+            </ul>
+            <p>Ou seja, a expressão <strong>log<sub>a</sub>B = X</strong> significa que <strong>a<sup>X</sup> = B</strong>. Exemplo:</p>
+            <p><code>log<sub>10</sub>100 = 2</code>, pois <code>10<sup>2</sup> = 100</code></p>
+        </div>
+
+        <div class="box">
+            <h2>Propriedades dos Logaritmos</h2>
+            <p>As principais propriedades dos logaritmos são:</p>
+            <ul>
+                <li><strong>log<sub>a</sub>1 = 0</strong>: O logaritmo de 1 na base <em>a</em> é sempre 0, porque qualquer número elevado a 0 é igual a 1.</li>
+                <p><code>log<sub>2</sub>1 = 0</code>, pois <code>2<sup>0</sup> = 1</code></p>
+
+                <li><strong>log<sub>a</sub>a = 1</strong>: O logaritmo da base <em>a</em> na própria base é 1, porque qualquer número elevado a 1 é igual a si mesmo.</li>
+                <p><code>log<sub>10</sub>10 = 1</code>, pois <code>10<sup>1</sup> = 10</code></p>
+
+                <li><strong>log<sub>a</sub>(B.C) = log<sub>a</sub>B + log<sub>a</sub>C</strong>: O logaritmo do produto é a soma dos logaritmos.</li>
+                <p><code>log<sub>10</sub>(100 * 1000) = log<sub>10</sub>100 + log<sub>10</sub>1000</code></p>
+                <p><code>log<sub>10</sub>100000 = 2 + 3 = 5</code></p>
+
+                <li><strong>log<sub>a</sub>(B/C) = log<sub>a</sub>B - log<sub>a</sub>C</strong>: O logaritmo do quociente é a diferença entre os logaritmos.</li>
+                <p><code>log<sub>10</sub>(1000 / 10) = log<sub>10</sub>1000 - log<sub>10</sub>10</code></p>
+                <p><code>log<sub>10</sub>100 = 3 - 1 = 2</code></p>
+
+                <li><strong>log<sub>a</sub>B<sup>n</sup> = n.log<sub>a</sub>B</strong>: O logaritmo de uma potência é o expoente multiplicado pelo logaritmo da base.</li>
+                <p><code>log<sub>2</sub>16 = log<sub>2</sub>2<sup>4</sup> = 4 * log<sub>2</sub>2 = 4</code></p>
+
+                <li><strong>log<sub>a</sub>B = log<sub>c</sub>B / log<sub>c</sub>a</strong>: O logaritmo pode ser alterado para uma nova base <em>c</em> usando esta relação. Isso é útil quando você precisa calcular logaritmos em bases diferentes.</li>
+                <p><code>log<sub>2</sub>8 = log<sub>10</sub>8 / log<sub>10</sub>2</code></p>
+                <p><code>log<sub>2</sub>8 = 0.903 / 0.301 ≈ 3</code></p>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Exemplo Prático de Logaritmo</h2>
+            <p>Suponha que você tenha que resolver o logaritmo:</p>
+            <p><strong>log<sub>5</sub>125</strong></p>
+            <p>Sabemos que:</p>
+            <p><code>log<sub>5</sub>125 = X</code>, e que <code>5<sup>X</sup> = 125</code>.</p>
+            <p>Como <code>5<sup>3</sup> = 125</code>, podemos concluir que <strong>X = 3</strong>.</p>
+        </div>
+
+        <div class="box">
+            <h2>Conclusão</h2>
+            <p>O logaritmo é uma ferramenta poderosa em várias áreas da matemática e ciência, sendo muito útil para resolver problemas envolvendo crescimento exponencial, escalas de medição e muitos outros campos. Ao compreender suas propriedades, você poderá manipulá-los de maneira mais eficiente e entender melhor as relações matemáticas.</p>
+        </div>
+
+        <div class="box">
+            <h2>Questões</h2>
+
+            <h3>Questão 1 (Adaptada)</h3>
+            <p>Resolva a equação:</p>
+            <p>log<sub>2</sub>(x) + log<sub>4</sub>(x) = 3</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <code>
+                <p><strong>Resolução:</strong></p>
+                <p>Primeiro, transformamos log<sub>4</sub>(x) para a base 2 usando a mudança de base:</p>
+                <p>log<sub>4</sub>(x) = log<sub>2</sub>(x) / log<sub>2</sub>(4) = log<sub>2</sub>(x) / 2</p>
+                <p>Substituindo na equação original:</p>
+                <p>log<sub>2</sub>(x) + log<sub>2</sub>(x) / 2 = 3</p>
+                <p>Multiplicando todos os termos por 2 para eliminar a fração:</p>
+                <p>2log<sub>2</sub>(x) + log<sub>2</sub>(x) = 6</p>
+                <p>Somando os termos:</p>
+                <p>3log<sub>2</sub>(x) = 6 ⟹ log<sub>2</sub>(x) = 2</p>
+                <p>Resolvendo para x:</p>
+                <p>x = 2<sup>2</sup> = 4</p>
+                <p><strong>Resposta:</strong> x = 4</p>
+            </code>
+            </details>
+
+            <h3>Questão 2 (Adaptada)</h3>
+            <p>Determine o valor de x que satisfaz a equação:</p>
+            <p>log<sub>3</sub>(x) + log<sub>9</sub>(x) = 4</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <code>
+                <p><strong>Resolução:</strong></p>
+                <p>Transformamos log<sub>9</sub>(x) para a base 3:</p>
+                <p>log<sub>9</sub>(x) = log<sub>3</sub>(x) / log<sub>3</sub>(9) = log<sub>3</sub>(x) / 2</p>
+                <p>Substituindo na equação original:</p>
+                <p>log<sub>3</sub>(x) + log<sub>3</sub>(x) / 2 = 4</p>
+                <p>Multiplicando todos os termos por 2:</p>
+                <p>2log<sub>3</sub>(x) + log<sub>3</sub>(x) = 8</p>
+                <p>Somando os termos:</p>
+                <p>3log<sub>3</sub>(x) = 8 ⟹ log<sub>3</sub>(x) = 8/3</p>
+                <p>Resolvendo para x:</p>
+                <p>x = 3<sup>8/3</sup></p>
+                <p><strong>Resposta:</strong> x = 3<sup>8/3</sup></p>
+            </code>
+            </details>
+
+            <h3>Questão 3 (Adaptada)</h3>
+            <p>Se log<sub>10</sub>(2) = a e log<sub>10</sub>(3) = b, expresse log<sub>10</sub>(72) em função de a e b.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <code>
+                <p><strong>Resolução:</strong></p>
+                <p>Fatoramos 72:</p>
+                <p>72 = 8 × 9 = 2<sup>3</sup> × 3<sup>2</sup></p>
+                <p>Aplicamos a propriedade do logaritmo do produto:</p>
+                <p>log<sub>10</sub>(72) = log<sub>10</sub>(2<sup>3</sup> × 3<sup>2</sup>) = log<sub>10</sub>(2<sup>3</sup>) + log<sub>10</sub>(3<sup>2</sup>)</p>
+                <p>Aplicamos a propriedade do logaritmo da potência:</p>
+                <p>log<sub>10</sub>(72) = 3log<sub>10</sub>(2) + 2log<sub>10</sub>(3)</p>
+                <p>Substituímos os valores dados:</p>
+                <p>log<sub>10</sub>(72) = 3a + 2b</p>
+                <p><strong>Resposta:</strong> log<sub>10</sub>(72) = 3a + 2b</p>
+            </code>
+            </details>
+
+            <h3>Questão 4 (Adaptada)</h3>
+            <p>Resolva a equação:</p>
+            <p>log<sub>2</sub>(x<sup>2</sup> − 4x + 4) = 3</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <code>
+                <p><strong>Resolução:</strong></p>
+                <p>Primeiro, resolvemos o logaritmo:</p>
+                <p>log<sub>2</sub>(x<sup>2</sup> − 4x + 4) = 3 ⟹ x<sup>2</sup> − 4x + 4 = 2<sup>3</sup></p>
+                <p>Simplificamos:</p>
+                <p>x<sup>2</sup> − 4x + 4 = 8 ⟹ x<sup>2</sup> − 4x − 4 = 0</p>
+                <p>Resolvemos a equação quadrática:</p>
+                <p>x = 4 ± √(16 + 16) / 2 = 4 ± √32 / 2 = 4 ± 4√2 / 2 = 2 ± 2√2</p>
+                <p>Verificamos as condições de existência do logaritmo:</p>
+                <p>x<sup>2</sup> − 4x + 4 > 0 ⟹ (x − 2)<sup>2</sup> > 0</p>
+                <p>Isso é verdade para todo x ≠ 2. Portanto, ambas as soluções são válidas.</p>
+                <p><strong>Resposta:</strong> x = 2 + 2√2 ou x = 2 − 2√2</p>
+            </code>
+            </details>
+
+            <h3>Questão 5 (Adaptada)</h3>
+            <p>Se log<sub>10</sub>(5) = a, determine log<sub>10</sub>(0,02) em função de a.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <code>
+                <p><strong>Resolução:</strong></p>
+                <p>Escrevemos 0,02 como uma fração:</p>
+                <p>0,02 = 2 / 100 = 1 / 50</p>
+                <p>Aplicamos a propriedade do logaritmo do quociente:</p>
+                <p>log<sub>10</sub>(0,02) = log<sub>10</sub>(1 / 50) = log<sub>10</sub>(1) − log<sub>10</sub>(50)</p>
+                <p>Sabemos que log<sub>10</sub>(1) = 0 e fatoramos 50:</p>
+                <p>log<sub>10</sub>(50) = log<sub>10</sub>(5 × 10) = log<sub>10</sub>(5) + log<sub>10</sub>(10) = a + 1</p>
+                <p>Substituímos:</p>
+                <p>log<sub>10</sub>(0,02) = 0 − (a + 1) = −a − 1</p>
+                <p><strong>Resposta:</strong> log<sub>10</sub>(0,02) = −a − 1</p>
+            </code>
+            </details>
+
+            <h3>Questão 6 (Adaptada)</h3>
+            <p>Resolva a equação:</p>
+            <p>log<sub>2</sub>(x) + log<sub>2</sub>(x + 2) = 3</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <code>
+                <p><strong>Resolução:</strong></p>
+                <p>Usamos a propriedade do logaritmo do produto:</p>
+                <p>log<sub>2</sub>(x(x + 2)) = 3</p>
+                <p>Isso implica:</p>
+                <p>x(x + 2) = 2<sup>3</sup></p>
+                <p>x<sup>2</sup> + 2x = 8</p>
+                <p>x<sup>2</sup> + 2x - 8 = 0</p>
+                <p>Resolvemos a equação quadrática:</p>
+                <p>x = [-2 ± √(4 + 32)] / 2</p>
+                <p>x = [-2 ± 6] / 2</p>
+                <p>As soluções são:</p>
+                <p>x = 2 ou x = -4</p>
+                <p>Como logaritmo de número negativo não é definido, a solução é:</p>
+                <p><strong>Resposta:</strong> x = 2</p>
+                </code>
+            </details>
+
+            <h3>Questão 7 (Adaptada)</h3>
+            <p>Resolva a equação:</p>
+            <p>log<sub>3</sub>(x - 1) + log<sub>3</sub>(x - 2) = 1</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <code>
+                <p><strong>Resolução:</strong></p>
+                <p>Usamos a propriedade do logaritmo do produto:</p>
+                <p>log<sub>3</sub>((x - 1)(x - 2)) = 1</p>
+                <p>Isso implica:</p>
+                <p>(x - 1)(x - 2) = 3<sup>1</sup></p>
+                <p>x<sup>2</sup> - 3x + 2 = 3</p>
+                <p>x<sup>2</sup> - 3x - 1 = 0</p>
+                <p>Resolvemos a equação quadrática:</p>
+                <p>x = [3 ± √(9 + 4)] / 2</p>
+                <p>x = [3 ± √13] / 2</p>
+                <p>As soluções são:</p>
+                <p>x = (3 + √13) / 2 ou x = (3 - √13) / 2</p>
+                <p>Ambas as soluções são válidas.</p>
+                <p><strong>Resposta:</strong> x = (3 + √13) / 2 ou x = (3 - √13) / 2</p>
+                </code>
+            </details>
+
+            <h3>Questão 8 (Adaptada)</h3>
+            <p>Se log<sub>2</sub>(3) = a, expresse log<sub>2</sub>(12) em função de a.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <code>
+                <p><strong>Resolução:</strong></p>
+                <p>Fatoramos 12:</p>
+                <p>12 = 3 × 4 = 3 × 2<sup>2</sup></p>
+                <p>Aplicamos a propriedade do logaritmo do produto:</p>
+                <p>log<sub>2</sub>(12) = log<sub>2</sub>(3 × 2<sup>2</sup>) = log<sub>2</sub>(3) + log<sub>2</sub>(2<sup>2</sup>)</p>
+                <p>Aplicamos a propriedade do logaritmo da potência:</p>
+                <p>log<sub>2</sub>(12) = a + 2log<sub>2</sub>(2)</p>
+                <p>Sabemos que log<sub>2</sub>(2) = 1:</p>
+                <p>log<sub>2</sub>(12) = a + 2</p>
+                <p><strong>Resposta:</strong> log<sub>2</sub>(12) = a + 2</p>
+                </code>
+            </details>
+
+            <h3>Questão 9 (Adaptada)</h3>
+            <p>Resolva a equação:</p>
+            <p>log<sub>5</sub>(x + 1) - log<sub>5</sub>(x - 1) = 1</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <code>
+                <p><strong>Resolução:</strong></p>
+                <p>Usamos a propriedade do logaritmo do quociente:</p>
+                <p>log<sub>5</sub>((x + 1) / (x - 1)) = 1</p>
+                <p>Isso implica:</p>
+                <p>(x + 1) / (x - 1) = 5<sup>1</sup></p>
+                <p>(x + 1) / (x - 1) = 5</p>
+                <p>Multiplicamos ambos os lados por (x - 1):</p>
+                <p>x + 1 = 5(x - 1)</p>
+                <p>x + 1 = 5x - 5</p>
+                <p>Isolamos x:</p>
+                <p>1 + 5 = 5x - x</p>
+                <p>6 = 4x</p>
+                <p>x = 6 / 4</p>
+                <p>x = 3 / 2</p>
+                <p><strong>Resposta:</strong> x = 3 / 2</p>
+                </code>
+            </details>
+
+            <h3>Questão 10 (Adaptada)</h3>
+            <p>Se log<sub>10</sub>(2) = a e log<sub>10</sub>(5) = b, expresse log<sub>10</sub>(0,04) em função de a e b.</p>
+            <details>
+                <summary>Ver Resposta</summary>
+                <code>
+                <p><strong>Resolução:</strong></p>
+                <p>Escrevemos 0,04 como uma fração:</p>
+                <p>0,04 = 4 / 100 = 2<sup>2</sup> / 10<sup>2</sup></p>
+                <p>Aplicamos a propriedade do logaritmo do quociente:</p>
+                <p>log<sub>10</sub>(0,04) = log<sub>10</sub>(2<sup>2</sup> / 10<sup>2</sup>) = log<sub>10</sub>(2<sup>2</sup>) - log<sub>10</sub>(10<sup>2</sup>)</p>
+                <p>Aplicamos a propriedade do logaritmo da potência:</p>
+                <p>log<sub>10</sub>(0,04) = 2log<sub>10</sub>(2) - 2log<sub>10</sub>(10)</p>
+                <p>Sabemos que log<sub>10</sub>(10) = 1:</p>
+                <p>log<sub>10</sub>(0,04) = 2a - 2</p>
+                <p><strong>Resposta:</strong> log<sub>10</sub>(0,04) = 2a - 2</p>
+                </code>
+            </details>
+        </div>
+    </div>
+</body>
+</html>
