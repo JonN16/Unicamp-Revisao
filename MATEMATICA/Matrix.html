@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrizes</title>
+    <link rel="stylesheet" href="CSS_MATEMATICA/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Matrizes</h1>
+        
+        <div class="box">
+            <h2>O que é uma matriz?</h2>
+            <p>Uma <strong>matriz</strong> é uma tabela de números organizados em <strong>linhas</strong> e <strong>colunas</strong>. Cada número dentro da matriz é chamado de <strong>elemento</strong>, e sua posição é indicada pelos índices <em>i</em> (linha) e <em>j</em> (coluna).</p>
+        </div>
+
+        <div class="box">
+            <h2>Exemplo de Matriz 3×3</h2>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>1</div> <div>2</div> <div>3</div>
+                <div>4</div> <div>5</div> <div>6</div>
+                <div>7</div> <div>8</div> <div>9</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Tipos de Matrizes</h2>
+            <h3>1. Matriz Linha</h3>
+            <p>Uma matriz que possui apenas <strong>uma única linha</strong>.</p>
+            <div class="matriz-linha">
+                <div>4</div> <div>7</div> <div>2</div> <div>5</div>
+            </div>
+
+            <h3>2. Matriz Coluna</h3>
+            <p>Uma matriz que possui apenas <strong>uma única coluna</strong>.</p>
+            <div class="matriz-coluna">
+                <div>8</div>
+                <div>3</div>
+                <div>6</div>
+                <div>1</div>
+            </div>
+
+            <h3>3. Matriz Quadrada</h3>
+            <p>Uma matriz onde o número de <strong>linhas</strong> e <strong>colunas</strong> é o mesmo.</p>
+            <div class="matriz" style="grid-template-columns: repeat(2, 50px);">
+                <div>5</div> <div>2</div>
+                <div>1</div> <div>7</div>
+            </div>
+
+            <h3>4. Matriz Retangular</h3>
+            <p>Uma matriz onde o número de <strong>linhas</strong> é diferente do número de <strong>colunas</strong>.</p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>1</div> <div>4</div> <div>7</div>
+                <div>2</div> <div>5</div> <div>8</div>
+            </div>
+
+            <h3>5. Matriz Nula</h3>
+            <p>Uma matriz onde todos os elementos são <strong>zero</strong>.</p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>0</div> <div>0</div> <div>0</div>
+                <div>0</div> <div>0</div> <div>0</div>
+                <div>0</div> <div>0</div> <div>0</div>
+            </div>
+
+            <h3>6. Matriz Triangular</h3>
+            <p>Uma matriz onde os elementos acima ou abaixo da diagonal principal são <strong>zero</strong>.</p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>2</div> <div>0</div> <div>0</div>
+                <div>4</div> <div>5</div> <div>0</div>
+                <div>7</div> <div>8</div> <div>9</div>
+            </div>
+
+            <h3>7. Matriz Diagonal</h3>
+            <p>Uma matriz onde apenas os elementos da <strong>diagonal principal</strong> são diferentes de zero.</p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>1</div> <div>0</div> <div>0</div>
+                <div>0</div> <div>3</div> <div>0</div>
+                <div>0</div> <div>0</div> <div>6</div>
+            </div>
+
+            <h3>8. Matriz Identidade</h3>
+            <p>Uma matriz onde os elementos da <strong>diagonal principal</strong> são 1 e os demais são 0.</p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>1</div> <div>0</div> <div>0</div>
+                <div>0</div> <div>1</div> <div>0</div>
+                <div>0</div> <div>0</div> <div>1</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Matriz Transposta</h2>
+            <p>A <strong>matriz transposta</strong> de uma matriz <code>A</code> é obtida trocando as <strong>linhas</strong> por <strong>colunas</strong>. Se um elemento está na posição <code>(i, j)</code>, na matriz transposta ele estará na posição <code>(j, i)</code>.</p>
+            
+            <h3>Exemplo de Matriz Original (3×2)</h3>
+            <p>Temos uma matriz com 3 linhas e 2 colunas:</p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(2, 50px);">
+                <div>1</div> <div>2</div>
+                <div>3</div> <div>4</div>
+                <div>5</div> <div>6</div>
+            </div>
+            
+            <h3>Matriz Transposta (2×3)</h3>
+            <p>Após a transposição, a matriz passa a ter 2 linhas e 3 colunas:</p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>1</div> <div>3</div> <div>5</div>
+                <div>2</div> <div>4</div> <div>6</div>
+            </div>
+            
+            <h3>Propriedades da Matriz Transposta</h3>
+            <ul>
+                <li><code>(A<sup>T</sup>)<sup>T</sup> = A</code> → A transposta da transposta retorna a matriz original.</li>
+                <li><code>(A + B)<sup>T</sup> = A<sup>T</sup> + B<sup>T</sup></code> → A transposição preserva a soma.</li>
+                <li><code>(A · B)<sup>T</sup> = B<sup>T</sup> · A<sup>T</sup></code> → A transposição inverte a ordem da multiplicação.</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Igualdade entre Matrizes</h2>
+            <p>Duas matrizes <code>A</code> e <code>B</code> são <strong>iguais</strong> se tiverem o mesmo número de <strong>linhas</strong> e <strong>colunas</strong> e seus elementos corresponderem exatamente, ou seja:</p>
+            
+            <p><code>
+            A = B Longleftrightarrow a<sub>ij</sub> = b<sub>ij</sub>, forall i, j
+            </code></p>
+            
+            <h3>Exemplo de Matrizes Iguais</h3>
+            <p>Essas duas matrizes possuem os mesmos elementos e dimensões, então são iguais:</p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>1</div> <div>2</div> <div>3</div>
+                <div>4</div> <div>5</div> <div>6</div>
+            </div>
+            
+            <p><code>=</code></p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>1</div> <div>2</div> <div>3</div>
+                <div>4</div> <div>5</div> <div>6</div>
+            </div>
+            
+            <h3>Exemplo de Matrizes Diferentes</h3>
+            <p>Essas duas matrizes têm valores diferentes, então <code>A neq B</code>:</p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>1</div> <div>2</div> <div>3</div>
+                <div>4</div> <div>5</div> <div>6</div>
+            </div>
+            
+            <p><code>neq</code></p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>1</div> <div>2</div> <div>0</div>
+                <div>4</div> <div>5</div> <div>8</div>
+            </div>
+            
+            <h3>Condições para a Igualdade</h3>
+            <ul>
+                <li>As matrizes devem ter o mesmo número de linhas e colunas.</li>
+                <li>Todos os elementos correspondentes devem ser idênticos.</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Adição e Subtração de Matrizes</h2>
+
+            <p>A <strong>adição</strong> e <strong>subtração</strong> de matrizes só podem ser realizadas se as matrizes tiverem o mesmo número de <strong>linhas</strong> e <strong>colunas</strong>. Os elementos correspondentes são somados ou subtraídos diretamente:</p>
+            
+            <p><code>
+            (A + B)<sub>ij</sub> = A<sub>ij</sub> + B<sub>ij</sub>
+            </code></p>
+            
+            <p><code>
+            (A - B)<sub>ij</sub> = A<sub>ij</sub> - B<sub>ij</sub>
+            </code></p>
+            
+            <h3>Exemplo de Adição de Matrizes</h3>
+            
+            <p>Considere as matrizes:</p>
+            
+            <div style="display: flex; gap: 20px;">
+                <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                    <div>1</div> <div>2</div> <div>3</div>
+                    <div>4</div> <div>5</div> <div>6</div>
+                </div>
+                <p>+</p>
+                <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                    <div>7</div> <div>8</div> <div>9</div>
+                    <div>1</div> <div>2</div> <div>3</div>
+                </div>
+            </div>
+            
+            <p>Somando elemento por elemento:</p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>8</div> <div>10</div> <div>12</div>
+                <div>5</div> <div>7</div> <div>9</div>
+            </div>
+            
+            <h3>Exemplo de Subtração de Matrizes</h3>
+            
+            <p>Agora, considere a subtração das mesmas matrizes:</p>
+            
+            <div style="display: flex; gap: 20px;">
+                <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                    <div>1</div> <div>2</div> <div>3</div>
+                    <div>4</div> <div>5</div> <div>6</div>
+                </div>
+                <p>-</p>
+                <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                    <div>7</div> <div>8</div> <div>9</div>
+                    <div>1</div> <div>2</div> <div>3</div>
+                </div>
+            </div>
+            
+            <p>Subtraindo elemento por elemento:</p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>-6</div> <div>-6</div> <div>-6</div>
+                <div>3</div> <div>3</div> <div>3</div>
+            </div>
+            
+            <h3>Propriedades da Adição de Matrizes</h3>
+            <ul>
+                <li><strong>Comutativa:</strong> <code>A + B = B + A</code></li>
+                <li><strong>Associativa:</strong> <code>(A + B) + C = A + (B + C)</code></li>
+                <li><strong>Elemento Neutro:</strong> <code>A + 0 = A</code></li>
+                <li><strong>Elemento Oposto:</strong> <code>A + (-A) = 0</code></li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Multiplicação de Matrizes</h2>
+
+            <p>A multiplicação de matrizes não exige que ambas tenham o mesmo número de linhas e colunas, mas para que seja possível multiplicar:</p>
+            
+            <ul>
+                <li>O número de <strong>colunas</strong> da primeira matriz deve ser igual ao número de <strong>linhas</strong> da segunda.</li>
+                <li>O resultado será uma nova matriz cujo número de <strong>linhas</strong> é o da primeira e o número de <strong>colunas</strong> é o da segunda.</li>
+            </ul>
+            
+            <h3>Fórmula da Multiplicação de Matrizes</h3>
+            
+            <p>Seja a matriz <code>A</code> de dimensão <code>m × n</code> e a matriz <code>B</code> de dimensão <code>n × p</code>, o elemento <code>C<sub>ij</sub></code> da matriz resultante <code>C = A × B</code> é obtido pela soma dos produtos dos elementos correspondentes da linha <code>i</code> da matriz <code>A</code> com a coluna <code>j</code> da matriz <code>B</code>:</p>
+            
+            <p><code>
+            C<sub>ij</sub> = A<sub>i1</sub> B<sub>1j</sub> + A<sub>i2</sub> B<sub>2j</sub> + ... + A<sub>in</sub> B<sub>nj</sub>
+            </code></p>
+            
+            <h3>Exemplo de Multiplicação de Matrizes</h3>
+            
+            <p>Considere as matrizes:</p>
+            
+            <div style="display: flex; gap: 20px;">
+                <div class="matriz" style="grid-template-columns: repeat(2, 50px);">
+                    <div>1</div> <div>2</div>
+                    <div>3</div> <div>4</div>
+                </div>
+                <p>×</p>
+                <div class="matriz" style="grid-template-columns: repeat(2, 50px);">
+                    <div>5</div> <div>6</div>
+                    <div>7</div> <div>8</div>
+                </div>
+            </div>
+            
+            <p>Fazemos o produto linha por coluna:</p>
+            
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <div class="matriz" style="grid-template-columns: repeat(2, 50px);">
+                    <div>1 × 5 + 2 × 7 = 5 + 14 = 19</div>
+                    <div>1 × 6 + 2 × 8 = 6 + 16 = 22</div>
+                    <div>3 × 5 + 4 × 7 = 15 + 28 = 43</div>
+                    <div>3 × 6 + 4 × 8 = 18 + 32 = 50</div>
+                </div>
+            </div>
+            
+            <p>Portanto, a matriz resultante é:</p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(2, 50px);">
+                <div>19</div> <div>22</div>
+                <div>43</div> <div>50</div>
+            </div>
+            
+            <h3>Propriedades da Multiplicação de Matrizes</h3>
+            
+            <ul>
+                <li><strong>Não é comutativa:</strong> <code>A × B ≠ B × A</code> na maioria dos casos.</li>
+                <li><strong>Associativa:</strong> <code>(A × B) × C = A × (B × C)</code>.</li>
+                <li><strong>Distributiva:</strong> <code>A × (B + C) = A × B + A × C</code>.</li>
+                <li><strong>Elemento neutro:</strong> <code>A × I = A</code>, onde <code>I</code> é a matriz identidade.</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Determinantes</h2>
+
+            <p>O determinante é um valor numérico associado a uma matriz quadrada. Ele pode ser utilizado para verificar se uma matriz é invertível e tem diversas aplicações em álgebra linear.</p>
+            
+            <h3>Condições para Existência</h3>
+            <ul>
+                <li>O determinante <strong>só existe</strong> para matrizes quadradas (mesmo número de linhas e colunas).</li>
+                <li>Se o determinante de uma matriz é <strong>zero</strong>, significa que ela não possui inversa.</li>
+            </ul>
+            
+            <h3>Diagonal Principal e Diagonal Secundária</h3>
+            <p>Em uma matriz quadrada, temos:</p>
+            <ul>
+                <li><strong>Diagonal principal:</strong> Vai do canto superior esquerdo ao inferior direito.</li>
+                <li><strong>Diagonal secundária:</strong> Vai do canto superior direito ao inferior esquerdo.</li>
+            </ul>
+            
+            <h3>Determinante de uma Matriz 2×2</h3>
+            <p>Seja a matriz:</p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(2, 50px);">
+                <div>a</div> <div>b</div>
+                <div>c</div> <div>d</div>
+            </div>
+            
+            <p>O determinante é calculado pela fórmula:</p>
+            
+            <p><code>
+            det(A) = (a × d) - (b × c)
+            </code></p>
+            
+            <p><strong>Exemplo:</strong></p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(2, 50px);">
+                <div>3</div> <div>4</div>
+                <div>2</div> <div>5</div>
+            </div>
+            
+            <p><code>
+            det(A) = (3 × 5) - (4 × 2) = 15 - 8 = 7
+            </code></p>
+            
+            <h3>Determinante de uma Matriz 3×3</h3>
+            <p>Seja a matriz:</p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>a</div> <div>b</div> <div>c</div>
+                <div>d</div> <div>e</div> <div>f</div>
+                <div>g</div> <div>h</div> <div>i</div>
+            </div>
+            
+            <p>O determinante é calculado pela <strong>Regra de Sarrus</strong>:</p>
+            
+            <p><code>
+            det(A) = aei + bfg + cdh - ceg - afh - bdi
+            </code></p>
+            
+            <p><strong>Exemplo:</strong></p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>2</div> <div>3</div> <div>1</div>
+                <div>4</div> <div>5</div> <div>6</div>
+                <div>7</div> <div>8</div> <div>9</div>
+            </div>
+            
+            <p><code>
+            det(A) = (2 × 5 × 9) + (3 × 6 × 7) + (1 × 4 × 8)
+            </code></p>
+            
+            <p><code>
+            - (1 × 5 × 7) - (2 × 6 × 8) - (3 × 4 × 9)
+            </code></p>
+            
+            <p><code>
+            = (90 + 126 + 32) - (35 + 96 + 108)
+            </code></p>
+            
+            <p><code>
+            = 248 - 239 = 9
+            </code></p>
+            
+            <h3>Propriedades dos Determinantes</h3>
+            <ul>
+                <li><strong>Se uma linha ou coluna for nula</strong>, então <code>det(A) = 0</code>.</li>
+                <li><strong>Se duas linhas ou colunas forem iguais</strong>, então <code>det(A) = 0</code>.</li>
+                <li><strong>Se trocarmos duas linhas ou colunas</strong>, o determinante muda de sinal.</li>
+                <li><strong>Multiplicar uma linha por um número</strong> multiplica o determinante pelo mesmo número.</li>
+                <li><code>det(A) = det(A<sup>T</sup>)</code> (determinante de uma matriz é igual ao de sua transposta).</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Propriedades dos Determinantes</h2>
+
+            <p>As propriedades dos determinantes são importantes para simplificar cálculos e entender o comportamento das matrizes. Aqui estão algumas das propriedades mais importantes:</p>
+            
+            <h3>1. Determinante de uma Matriz e sua Transposta</h3>
+            <p>O determinante de uma matriz é igual ao determinante da sua matriz transposta:</p>
+            <p><code>
+            det(A) = det(A<sup>T</sup>)
+            </code></p>
+            
+            <p>Ou seja, se você trocar as linhas por colunas, o valor do determinante não será alterado.</p>
+            
+            <p><strong>Exemplo:</strong></p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(2, 50px);">
+                <div>2</div> <div>3</div>
+                <div>4</div> <div>5</div>
+            </div>
+            
+            <p>Determinante de <code>A</code>:</p>
+            <p><code>
+            det(A) = (2 × 5) - (3 × 4) = 10 - 12 = -2
+            </code></p>
+            
+            <p>Transposta de <code>A</code>:</p>
+            <div class="matriz" style="grid-template-columns: repeat(2, 50px);">
+                <div>2</div> <div>4</div>
+                <div>3</div> <div>5</div>
+            </div>
+            
+            <p>Determinante de <code>A<sup>T</sup></code>:</p>
+            <p><code>
+            det(A<sup>T</sup>) = (2 × 5) - (4 × 3) = 10 - 12 = -2
+            </code></p>
+            
+            <h3>2. Linha Nula</h3>
+            <p>Se uma das linhas (ou colunas) de uma matriz for composta apenas por zeros, então o determinante dessa matriz será igual a zero:</p>
+            <p><code>
+            det(A) = 0 quad text{se houver uma linha ou coluna nula.}
+            </code></p>
+            
+            <p><strong>Exemplo:</strong></p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>2</div> <div>3</div> <div>1</div>
+                <div>0</div> <div>0</div> <div>0</div>
+                <div>4</div> <div>5</div> <div>6</div>
+            </div>
+            
+            <p><code>
+            det(A) = 0
+            </code></p>
+            
+            <h3>3. Linhas Iguais</h3>
+            <p>Se duas linhas (ou colunas) de uma matriz forem iguais, o determinante será zero:</p>
+            <p><code>
+            det(A) = 0 quad text{se houverem duas linhas ou colunas iguais.}
+            </code></p>
+            
+            <p><strong>Exemplo:</strong></p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>2</div> <div>3</div> <div>1</div>
+                <div>2</div> <div>3</div> <div>1</div>
+                <div>4</div> <div>5</div> <div>6</div>
+            </div>
+            
+            <p><code>
+            det(A) = 0
+            </code></p>
+            
+            <h3>4. Linhas Proporcionais</h3>
+            <p>Se duas linhas (ou colunas) de uma matriz forem proporcionais, o determinante será zero:</p>
+            <p><code>
+            det(A) = 0 quad text{se houverem duas linhas ou colunas proporcionais.}
+            </code></p>
+            
+            <p><strong>Exemplo:</strong></p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>2</div> <div>4</div> <div>6</div>
+                <div>1</div> <div>2</div> <div>3</div>
+                <div>4</div> <div>5</div> <div>6</div>
+            </div>
+            
+            <p><code>
+            det(A) = 0
+            </code></p>
+            
+            <h3>5. Troca de Linhas</h3>
+            <p>Se você trocar duas linhas (ou colunas) de uma matriz, o determinante muda de sinal:</p>
+            <p><code>
+            det(A) = -det(A') quad text{onde <code>A'</code> é a matriz após a troca.}
+            </code></p>
+            
+            <p><strong>Exemplo:</strong></p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>2</div> <div>3</div> <div>1</div>
+                <div>4</div> <div>5</div> <div>6</div>
+                <div>7</div> <div>8</div> <div>9</div>
+            </div>
+            
+            <p>Determinante de <code>A</code>:</p>
+            <p><code>
+            det(A) = (2 × 5 × 9) + (3 × 6 × 7) + (1 × 4 × 8) - (1 × 5 × 7) - (2 × 6 × 8) - (3 × 4 × 9)
+            </code></p>
+            
+            <p><code>
+            det(A) = 90 + 126 + 32 - 35 - 96 - 108 = 9
+            </code></p>
+            
+            <p>Agora trocando as duas primeiras linhas:</p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>4</div> <div>5</div> <div>6</div>
+                <div>2</div> <div>3</div> <div>1</div>
+                <div>7</div> <div>8</div> <div>9</div>
+            </div>
+            
+            <p>Determinante de <code>A'</code>:</p>
+            <p><code>
+            det(A') = -(2 × 5 × 9) - (3 × 6 × 7) - (1 × 4 × 8) + (1 × 5 × 7) + (2 × 6 × 8) + (3 × 4 × 9)
+            </code></p>
+            
+            <p><code>
+            det(A') = -90 - 126 - 32 + 35 + 96 + 108 = -9
+            </code></p>
+        </div>
+
+        <div class="box">
+            <h2>Menor Complementar</h2>
+            <p>O Menor Complementar de um elemento de uma matriz é o determinante da submatriz que resta quando a linha e a coluna do elemento são removidas. Este valor é utilizado no cálculo do determinante através da expansão de Laplace.</p>
+            
+            <p><strong>Definição:</strong> Se tivermos uma matriz <code>A</code> e queremos calcular o menor complementar do elemento <code>a<sub>ij</sub></code>, retiramos a linha <code>i</code> e a coluna <code>j</code> de <code>A</code>, e o determinante da matriz resultante é o menor complementar de <code>a<sub>ij</sub></code>.</p>
+            
+            <p>O Menor Complementar é utilizado no cálculo do determinante, de acordo com a regra de Laplace:</p>
+            <p><strong>Exemplo:</strong></p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+                <div>1</div> <div>2</div> <div>3</div>
+                <div>4</div> <div>5</div> <div>6</div>
+                <div>7</div> <div>8</div> <div>9</div>
+            </div>
+            
+            <p>Para calcular o menor complementar de <code>a<sub>23</sub></code> (elemento 6), removemos a segunda linha e a terceira coluna:</p>
+            <div class="matriz" style="grid-template-columns: repeat(2, 50px);">
+                <div>1</div> <div>2</div>
+                <div>7</div> <div>8</div>
+            </div>
+            
+            <p>O determinante da submatriz 2x2 é:</p>
+            <p><code>
+            text{Menor Complementar} = (1 × 8) - (2 × 7) = 8 - 14 = -6
+            </code></p>
+            
+            <p>Agora, este menor complementar será multiplicado pelo cofator de <code>a<sub>23</sub></code> na expansão do determinante.</p>
+        </div>
+
+        <div class="box">
+            <h2>Teorema de Laplace</h2>
+            <p>O Teorema de Laplace (ou expansão de Laplace) é uma técnica que permite calcular o determinante de uma matriz de qualquer ordem. Ele se baseia na expansão do determinante ao longo de uma linha ou coluna, utilizando os menores complementares de seus elementos.</p>
+            
+            <p><strong>Teorema:</strong> O determinante de uma matriz <code>A</code> de ordem <code>n</code> pode ser calculado expandindo ao longo de uma linha ou coluna. Para a linha <code>i</code>, temos:</p>
+            
+            <p><code>
+            det(A) = ∑ (-1)<sup>i+j</sup> ⋅ a<sub>ij</sub> ⋅ det(M<sub>ij</sub>)
+            </code></p>
+            
+            <p>Onde <code>M<sub>ij</sub></code> é a submatriz resultante de remover a linha <code>i</code> e a coluna <code>j</code> da matriz <code>A</code>, e <code>(-1)<sup>i+j</sup></code> é o sinal alternado (ou cofator).</p>
+            
+            <p><strong>Exemplo:</strong></p>
+            
+            <div class="matriz" style="grid-template-columns: repeat(4, 50px);">
+            <div>1</div> <div>2</div> <div>3</div> <div>4</div>
+            <div>5</div> <div>6</div> <div>7</div> <div>8</div>
+            <div>9</div> <div>10</div> <div>11</div> <div>12</div>
+            <div>13</div> <div>14</div> <div>15</div> <div>16</div>
+            </div>
+            
+            <p>Vamos calcular o determinante da matriz <code>A</code> expandindo ao longo da primeira linha:</p>
+            <p><code>
+            det(A) = (1 ⋅ det(M<sub>11</sub>)) - (2 ⋅ det(M<sub>12</sub>)) + (3 ⋅ det(M<sub>13</sub>)) - (4 ⋅ det(M<sub>14</sub>))
+            </code></p>
+            
+            <p>Agora, vamos calcular os menores complementares:</p>
+            
+            <p><strong>Menor Complementar de <code>a<sub>11</sub></code>:</strong></p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+            <div>6</div> <div>7</div> <div>8</div>
+            <div>10</div> <div>11</div> <div>12</div>
+            <div>14</div> <div>15</div> <div>16</div>
+            </div>
+            
+            <p><code>
+            det(M<sub>11</sub>) = (6 ⋅ (11 ⋅ 16 - 12 ⋅ 15)) - (7 ⋅ (10 ⋅ 16 - 12 ⋅ 14)) + (8 ⋅ (10 ⋅ 15 - 11 ⋅ 14))
+            </code></p>
+            <p><code>
+            det(M<sub>11</sub>) = (6 ⋅ (-4)) - (7 ⋅ (-44)) + (8 ⋅ (-25)) = -24 + 308 - 200 = 84
+            </code></p>
+            
+            <p><strong>Menor Complementar de <code>a<sub>12</sub></code>:</strong></p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+            <div>5</div> <div>7</div> <div>8</div>
+            <div>9</div> <div>11</div> <div>12</div>
+            <div>13</div> <div>15</div> <div>16</div>
+            </div>
+            
+            <p><code>
+            det(M<sub>12</sub>) = (5 ⋅ (11 ⋅ 16 - 12 ⋅ 15)) - (7 ⋅ (9 ⋅ 16 - 12 ⋅ 13)) + (8 ⋅ (9 ⋅ 15 - 11 ⋅ 13))
+            </code></p>
+            <p><code>
+            det(M<sub>12</sub>) = (5 ⋅ (-4)) - (7 ⋅ (12)) + (8 ⋅ (6)) = -20 - 84 + 48 = -56
+            </code></p>
+            
+            <p><strong>Menor Complementar de <code>a<sub>13</sub></code>:</strong></p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+            <div>5</div> <div>6</div> <div>8</div>
+            <div>9</div> <div>10</div> <div>12</div>
+            <div>13</div> <div>14</div> <div>16</div>
+            </div>
+            
+            <p><code>
+            det(M<sub>13</sub>) = (5 ⋅ (10 ⋅ 16 - 12 ⋅ 14)) - (6 ⋅ (9 ⋅ 16 - 12 ⋅ 13)) + (8 ⋅ (9 ⋅ 14 - 10 ⋅ 13))
+            </code></p>
+            <p><code>
+            det(M<sub>13</sub>) = (5 ⋅ (-28)) - (6 ⋅ (12)) + (8 ⋅ (-4)) = -140 - 72 - 32 = -244
+            </code></p>
+            
+            <p><strong>Menor Complementar de <code>a<sub>14</sub></code>:</strong></p>
+            <div class="matriz" style="grid-template-columns: repeat(3, 50px);">
+            <div>5</div> <div>6</div> <div>7</div>
+            <div>9</div> <div>10</div> <div>11</div>
+            <div>13</div> <div>14</div> <div>15</div>
+            </div>
+            
+            <p><code>
+            det(M<sub>14</sub>) = (5 ⋅ (10 ⋅ 15 - 11 ⋅ 14)) - (6 ⋅ (9 ⋅ 15 - 11 ⋅ 13)) + (7 ⋅ (9 ⋅ 14 - 10 ⋅ 13))
+            </code></p>
+            <p><code>
+            det(M<sub>14</sub>) = (5 ⋅ (-4)) - (6 ⋅ (12)) + (7 ⋅ (4)) = -20 - 72 + 28 = -64
+            </code></p>
+            
+            <p>Agora substituímos os valores na expansão:</p>
+            <p><code>
+            det(A) = (1 ⋅ 84) - (2 ⋅ -56) + (3 ⋅ -244) - (4 ⋅ -64) = 84 + 112 - 732 + 256 = -280
+            </code></p>
+            
+            <p>Portanto, o determinante de <code>A</code> é -280.</p>
+            
+            <p><strong>Importante:</strong> A expansão de Laplace pode ser aplicada em matrizes de qualquer ordem, mas quanto maior a matriz, mais operações serão necessárias. Em matrizes de ordem 4 ou superior, geralmente utilizamos algoritmos mais eficientes para calcular o determinante, como o método de eliminação de Gauss.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -188,3 +188,42 @@ img {
     width: 300px;
     height: auto;
 }
+
+.matriz {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 5px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+.matriz div {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 18px;
+}
+.matriz-linha {
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+.matriz-linha div {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 18px;
+}
+.matriz-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+.matriz-coluna div {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 18px;
+}
