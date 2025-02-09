@@ -86,3 +86,19 @@ footer p {
     border-radius: 0 100% 0 0;
     background-color: cadetblue;
 }
+
+canvas {
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    text-align: center;
+}
+.image-container img {
+    width: 50%;
+    height: auto;
+}

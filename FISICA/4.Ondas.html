@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS_FISICA/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ondas</h1>
+        <div class="box">
+            <h2>O que são Ondas?</h2>
+            <p>Ondas são perturbações que transportam energia e informações sem levar matéria de um ponto a outro.</p>
+            <h3>Tipos de Ondas</h3>
+            <ul>
+                <li><strong>Eletromagnéticas:</strong> Não precisam de um meio material para se propagar. Exemplos:
+                    <ul>
+                        <li>Raio UV</li>
+                        <li>Infravermelho</li>
+                        <li>Luz visível</li>
+                        <li>Micro-ondas</li>
+                        <li>Ondas de rádio</li>
+                    </ul>
+                </li>
+                <li><strong>Mecânicas:</strong> Precisam de um meio material para se propagar. Exemplos:
+                    <ul>
+                        <li>Ondas do mar</li>
+                        <li>Ondas sonoras (som)</li>
+                        <li>Ondas em cordas</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Elementos de uma Onda</h2>
+            <p>Uma onda possui diversas características que ajudam a descrever seu comportamento e propriedades. Entre os principais elementos estão:</p>
+            <ul>
+                <li><strong>Crista:</strong> O ponto mais alto de uma onda.</li>
+                <li><strong>Vale:</strong> O ponto mais baixo de uma onda.</li>
+                <li><strong>Amplitude:</strong> A altura da onda, que mede a distância entre o ponto de equilíbrio e a crista ou o vale.</li>
+                <li><strong>Comprimento de onda (λ):</strong> Representado pelo símbolo <em>λ</em>, é a distância entre duas cristas ou dois vales consecutivos.</li>
+                <li><strong>Frequência (F):</strong> Mede o número de oscilações (ciclos) que ocorrem por segundo. Sua unidade é o Hertz (Hz).</li>
+                <li><strong>Velocidade (V):</strong> Representa a rapidez com que a onda se propaga. É calculada pela fórmula:
+                    <strong>V = λ · F</strong></li>
+            </ul>
+
+            <h3>Difração</h3>
+            <p>A <strong>difração</strong> é um fenômeno físico que ocorre quando uma onda encontra um obstáculo ou passa por uma abertura. Ao invés de simplesmente ser bloqueada, a onda tem a capacidade de contornar o obstáculo ou se espalhar após passar pela abertura.</p>
+            <p>Esse comportamento é especialmente notável em ondas de maior comprimento, como o som, e pode ser observado em diversos cenários do dia a dia. Por exemplo:</p>
+            <ul>
+                <li><strong>Som:</strong> O som de uma pessoa falando em um quarto pode ser ouvido em outra sala, mesmo que as portas estejam apenas parcialmente abertas. Isso acontece porque as ondas sonoras conseguem contornar os cantos e obstáculos.</li>
+                <li><strong>Luz:</strong> A luz que passa por uma pequena fenda pode se espalhar, criando um padrão característico de luz e sombra em superfícies próximas. Esse fenômeno é usado em experimentos científicos, como o experimento da fenda dupla de Young.</li>
+                <li><strong>Água:</strong> Ondas na superfície da água se espalham ao passar por uma abertura entre barreiras, criando círculos concêntricos que se expandem a partir da abertura.</li>
+            </ul>
+            <p>A difração é mais pronunciada quando o comprimento de onda da onda é comparável ou maior do que o tamanho da abertura ou obstáculo. No caso de ondas muito pequenas em comparação ao obstáculo, o efeito de difração se torna menos perceptível.</p>
+        </div>
+
+        <div class="box">
+            <h2>Fisiologia do Som</h2>
+            <p>O som é uma onda mecânica que se propaga através de meios materiais, como ar, água ou sólidos. Sua percepção pelos seres humanos é baseada em três características principais: <strong>altura</strong>, <strong>intensidade</strong> e <strong>timbre</strong>. Cada uma dessas características está associada a aspectos físicos da onda e influenciam como percebemos os sons ao nosso redor.</p>
+            
+            <h3>Altura</h3>
+            <p>A altura é determinada pela <strong>frequência</strong> da onda sonora, que representa o número de oscilações (ou ciclos) por segundo, medida em Hertz (Hz). É a frequência que define se o som será percebido como <strong>grave</strong> ou <strong>agudo</strong>.</p>
+            <ul>
+                <li><strong>Som grave:</strong> Frequências mais baixas (ex.: 100 Hz), como o som de um tambor ou um trovão.</li>
+                <li><strong>Som agudo:</strong> Frequências mais altas (ex.: 5.000 Hz), como o som de um apito ou de uma flauta.</li>
+                <li><strong>Notas musicais:</strong> Cada nota musical tem uma frequência associada. Por exemplo, o Lá central em um piano tem frequência de 440 Hz.</li>
+            </ul>
+            <p>Os humanos conseguem ouvir sons com frequências entre 20 Hz e 20.000 Hz. Frequências abaixo ou acima desse intervalo são chamadas de <strong>infrassons</strong> e <strong>ultrassons</strong>, respectivamente, e não podem ser percebidas pelo ouvido humano, mas podem ser utilizadas em tecnologias como sonar e ultrassonografia.</p>
+            <div id="GraficoAltura"></div>
+            <div class="box">
+                <h2>Gráfico de Altura (Agudo)</h2>
+                <canvas id="GraficoAlturaAgudo" width="400" height="200"></canvas>
+            </div>
+            <div class="box">
+                <h2>Gráfico de Altura (Grave)</h2>
+                <canvas id="GraficoAlturaGrave" width="400" height="200"></canvas>
+            </div>
+
+            <h3>Intensidade</h3>
+            <p>A intensidade do som está relacionada à quantidade de energia transportada pela onda, o que percebemos como o <strong>volume</strong>. Sons mais intensos são percebidos como mais altos, enquanto sons menos intensos são percebidos como mais baixos.</p>
+            <ul>
+                <li><strong>Unidade de medida:</strong> A intensidade sonora é medida em decibéis (dB).</li>
+                <li><strong>Exemplos:</strong> 
+                    <ul>
+                        <li>Conversas normais: cerca de 60 dB.</li>
+                        <li>Motor de avião: acima de 120 dB (pode causar danos ao ouvido).</li>
+                        <li>Som de uma folha caindo: cerca de 10 dB.</li>
+                    </ul>
+                </li>
+                <li><strong>Efeito na saúde:</strong> Exposição prolongada a sons acima de 85 dB pode causar danos permanentes à audição.</li>
+            </ul>
+            <div id="GraficoIntensidade"></div>
+            <div class="box">
+                <h2>Gráfico de Intensidade (Som Fraco)</h2>
+                <canvas id="GraficoIntensidadeFraco" width="400" height="200"></canvas>
+            </div>
+            <div class="box">
+                <h2>Gráfico de Intensidade (Som Forte)</h2>
+                <canvas id="GraficoIntensidadeForte" width="400" height="200"></canvas>
+            </div>
+
+            <h3>Timbre</h3>
+            <p>O timbre é a característica que permite diferenciar sons de diferentes fontes, mesmo que tenham a mesma altura e intensidade. É determinado pela <strong>forma da onda sonora</strong>, que varia de acordo com o instrumento ou a fonte que produz o som.</p>
+            <ul>
+                <li><strong>Instrumentos musicais:</strong> O timbre de um violino é diferente do de um piano, mesmo quando tocam a mesma nota.</li>
+                <li><strong>Voz humana:</strong> O timbre é o que nos permite distinguir a voz de diferentes pessoas.</li>
+                <li><strong>Composição harmônica:</strong> O timbre é influenciado pelos harmônicos (frequências adicionais) gerados pela fonte sonora.</li>
+            </ul>
+            <div id="GraficoTimbre"></div>
+            <div class="box">
+                <h2>Gráfico de Timbre (Onda Quadrada)</h2>
+                <canvas id="GraficoTimbreQuadrado" width="400" height="200"></canvas>
+            </div>
+            <div class="box">
+                <h2>Gráfico de Timbre (Onda Arredondada)</h2>
+                <canvas id="GraficoTimbreArredondado" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Interferência de Ondas</h2>
+            <p>A interferência é o fenômeno que ocorre quando duas ou mais ondas se encontram no mesmo ponto do espaço. Essa interação pode resultar em uma <strong>soma</strong> ou <strong>subtração</strong> das amplitudes das ondas, dependendo da fase em que elas se encontram.</p>
+            
+            <h3>Interferência Construtiva</h3>
+            <p>Na interferência construtiva, as ondas se encontram em fase (as cristas e os vales coincidem), resultando em uma onda resultante de maior amplitude. Isso amplifica o som ou a luz.</p>
+            <ul>
+                <li><strong>Exemplo:</strong> Luzes em shows musicais, onde diferentes fontes de luz somam suas intensidades para criar efeitos brilhantes e coloridos.</li>
+                <li><strong>Aplicações:</strong> Tecnologia de lasers, amplificação de sinais sonoros em alto-falantes.</li>
+            </ul>
+
+            <h3>Interferência Destrutiva</h3>
+            <p>Na interferência destrutiva, as ondas se encontram em oposição de fase (a crista de uma onda coincide com o vale de outra), resultando em uma onda de menor amplitude ou, em casos extremos, o cancelamento total do som ou luz.</p>
+            <ul>
+                <li><strong>Exemplo:</strong> Redução do ruído em fones de ouvido com cancelamento de ruído ativo.</li>
+                <li><strong>Aviação:</strong> Cancelamento parcial do ruído dos motores, permitindo uma viagem mais silenciosa para os passageiros.</li>
+            </ul>
+
+            <h3>Importância na Ciência e Tecnologia</h3>
+            <p>A interferência de ondas é amplamente utilizada em diversas áreas da ciência e tecnologia, como:
+                <ul>
+                    <li>Em telecomunicações, para transmissão eficiente de sinais.</li>
+                    <li>Em instrumentos musicais, para melhorar a qualidade do som.</li>
+                    <li>Na física, para estudar o comportamento de luz e som em diferentes condições.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function createSineWaveChart(chartId, chartLabel, amplitude, frequency, phaseShift, chartBorderColor) {
+                const ctx = document.getElementById(chartId).getContext('2d');
+                
+                const xValues = [];
+                const yValues = [];
+                
+                // Gerando valores para a onda senoidal
+                for (let x = -27; x <= 27; x++) {
+                    xValues.push(x);
+                    // A função senoidal: y = A * sin(2 * π * f * x + φ)
+                    // A: Amplitude, f: Frequência, φ: Deslocamento de fase
+                    const y = amplitude * Math.sin(2 * Math.PI * frequency * x + phaseShift);
+                    yValues.push(y);
+                }
+    
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            label: chartLabel,
+                            data: yValues,
+                            borderColor: chartBorderColor,
+                            borderWidth: 2,
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: chartLabel
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Valor de X'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Valor de Y'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            function createSquareWaveChart(chartId, chartLabel, amplitude, frequency, chartBorderColor) {
+                const ctx = document.getElementById(chartId).getContext('2d');
+                
+                const xValues = [];
+                const yValues = [];
+                
+                // Gerando valores para a onda quadrada
+                for (let x = -27; x <= 27; x++) {
+                    xValues.push(x);
+                    // A função onda quadrada: y = A * sign(sin(2 * π * f * x))
+                    const y = amplitude * Math.sign(Math.sin(2 * Math.PI * frequency * x));
+                    yValues.push(y);
+                }
+
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            label: chartLabel,
+                            data: yValues,
+                            borderColor: chartBorderColor,
+                            borderWidth: 2,
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: chartLabel
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Valor de X'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Valor de Y'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+    
+            // Criando gráficos para sons agudos e graves
+            createSineWaveChart('GraficoAlturaAgudo', 'Onda Senoidal - Altura (Agudo)', 10, 0.3, 0, 'blue');
+            createSineWaveChart('GraficoAlturaGrave', 'Onda Senoidal - Altura (Grave)', 10, 0.05, 0, 'blue');
+            createSineWaveChart('GraficoIntensidadeFraco', 'Onda Senoidal - Intensidade (Som Fraco)', 5, 0.1, 0, 'red');
+            createSineWaveChart('GraficoIntensidadeForte', 'Onda Senoidal - Intensidade (Som Forte)', 15, 0.1, 0, 'red');
+            createSquareWaveChart('GraficoTimbreQuadrado', 'Onda Quadrada - Timbre', 10, 0.1, 'green');
+            createSineWaveChart('GraficoTimbreArredondado', 'Onda Senoidal - Timbre (Arredondada)', 10, 0.1, 0, 'green');
+        });
+    </script>
+</body>
+</html>
