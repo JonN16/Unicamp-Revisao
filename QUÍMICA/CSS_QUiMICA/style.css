@@ -103,3 +103,25 @@ th {
 td{
     background-color: #f9f9f9;
 }
+
+/* Linus Pauling List */
+.linus-pauling {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.linus-pauling li {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    width: 50px;
+}
