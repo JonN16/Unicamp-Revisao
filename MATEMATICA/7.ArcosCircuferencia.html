@@ -253,6 +253,54 @@
     </div>
 
     <div class="box">
+        <h2>Sen e Cos juntos</h2>
+        <canvas id="trigGraph"></canvas>
+<script>
+    const ctx = document.getElementById('trigGraph').getContext('2d');
+    const labels = Array.from({ length: 361 }, (_, i) => i); // 0 a 360
+    const data = {
+        labels: labels,
+        datasets: [
+            {
+                label: 'Sen(x)',
+                data: labels.map(x => Math.sin(x * Math.PI / 180)),
+                borderColor: 'red',
+                fill: false,
+            },
+            {
+                label: 'Cos(x)',
+                data: labels.map(x => Math.cos(x * Math.PI / 180)),
+                borderColor: 'blue',
+                fill: false,
+            },
+            {
+                label: 'Tg(x)',
+                data: labels.map(x => Math.tan(x * Math.PI / 180)),
+                borderColor: 'green',
+                fill: false,
+                hidden: true, // Tangente pode explodir em valores!
+            },
+        ],
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            scales: {
+                x: { title: { display: true, text: 'Ângulo (°)' } },
+                y: { title: { display: true, text: 'Valor' } },
+            },
+        },
+    };
+
+    new Chart(ctx, config);
+</script>
+
+    </div>
+
+    <div class="box">
         <h2>Função Tangente</h2>
 
         <h3>Definição Matemática</h3>
@@ -290,65 +338,39 @@
       
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            function createChart(chartId, chartLabel, chartData, chartBorderColor, vertexPoint) {
-                const ctx = document.getElementById(chartId).getContext('2d');
-                new Chart(ctx, {
+            function createChart(ctx, labels, data, borderColor, label) {
+                return new Chart(ctx, {
                     type: 'line',
                     data: {
-                        labels: ['-3π', '-2π', '-π', '0', 'π', '2π', '3π'],
+                        labels: labels,
                         datasets: [{
-                            label: chartLabel,
-                            data: chartData,
-                            borderColor: chartBorderColor,
-                            borderWidth: 2,
+                            label: label,
+                            data: data,
+                            borderColor: borderColor,
                             fill: false,
-                            pointBackgroundColor: function(context) {
-                                const index = context.dataIndex;
-                                const value = context.dataset.data[index];
-                                return value === vertexPoint ? 'red' : chartBorderColor;
-                            },
-                            pointRadius: function(context) {
-                                const index = context.dataIndex;
-                                const value = context.dataset.data[index];
-                                return value === vertexPoint ? 6 : 3;
-                            }
-                        }]
+                        }],
                     },
                     options: {
                         responsive: true,
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: chartLabel
-                            }
-                        },
                         scales: {
-                            x: {
-                                title: {
-                                    display: true,
-                                    text: 'Valor de X'
-                                },
-                            },
-                            y: {
-                                title: {
-                                    display: true,
-                                    text: 'Valor de f(x) ou Y'
-                                },
-                                grid: {
-                                    color: (ctx) => ctx.tick.value === 0 ? 'rgba(0, 0, 0, 1)' : 'rgba(200, 200, 200, 0.3)', // Linha Y mais escura no 0
-                                    lineWidth: (ctx) => ctx.tick.value === 0 ? 2 : 0.5, // Espessura maior no 0
-                                }
-                            }
-                        }
-                    }
+                            x: { title: { display: true, text: 'Ângulo (°)' } },
+                            y: { title: { display: true, text: 'Valor' } },
+                        },
+                    },
                 });
             }
 
-            const sineData = [-1, 0, 1, 0, -1, 0, 1];
-            createChart('sineChart', 'Função Seno', sineData, '#0d6efd', 1);
+            const labels = Array.from({ length: 361 }, (_, i) => i); // 0 a 360
 
-            const cosineData = [0, -1, 0, 1, 0, -1, 0];
-            createChart('cosineChart', 'Função Cosseno', cosineData, '#dc3545', 1);
+            // Sine chart
+            const sineCtx = document.getElementById('sineChart').getContext('2d');
+            const sineData = labels.map(x => Math.sin(x * Math.PI / 180));
+            createChart(sineCtx, labels, sineData, 'red', 'Sen(x)');
+
+            // Cosine chart
+            const cosineCtx = document.getElementById('cosineChart').getContext('2d');
+            const cosineData = labels.map(x => Math.cos(x * Math.PI / 180));
+            createChart(cosineCtx, labels, cosineData, 'blue', 'Cos(x)');
         });
     </script>
 

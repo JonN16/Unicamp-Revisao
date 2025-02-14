@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS_MATEMATICA/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Triginometria leis</h1>
+
+        <div class="box">
+            <h2>Valores Trigonométricos para Ângulos Notáveis</h2>
+            <table>
+                <tr>
+                    <th>Ângulo</th>
+                    <th>Sen</th>
+                    <th>Cos</th>
+                    <th>Tg</th>
+                    <th>Cotg</th>
+                </tr>
+                <tr>
+                    <td>30°</td>
+                    <td>1/2</td>
+                    <td>√3/2</td>
+                    <td>√3/3</td>
+                    <td>√3</td>
+                </tr>
+                <tr>
+                    <td>45°</td>
+                    <td>√2/2</td>
+                    <td>√2/2</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>60°</td>
+                    <td>√3/2</td>
+                    <td>1/2</td>
+                    <td>√3</td>
+                    <td>√3/3</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box">
+            <h2>Lei dos Cossenos</h2>
+            <p>A <strong>Lei dos Cossenos</strong> é uma generalização do Teorema de Pitágoras que permite calcular os lados ou ângulos de um triângulo qualquer, seja ele acutângulo, obtusângulo ou retângulo. Ela é especialmente útil quando o triângulo não é retângulo.</p>
+            <h3>Fórmula Geral:</h3>
+            <p>Para um triângulo com lados <em>a</em>, <em>b</em> e <em>c</em>, onde o ângulo <em>θ</em> está oposto ao lado <em>a</em>, a fórmula é:</p>
+            <p><strong><code>a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2 · b · c · cos(θ)</code></strong></p>
+            <h3>Outras Formas da Lei dos Cossenos:</h3>
+            <ul>
+                <li><strong><code>b<sup>2</sup> = a<sup>2</sup> + c<sup>2</sup> - 2 · a · c · cos(β)</code></strong></li>
+                <li><strong><code>c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup> - 2 · a · b · cos(γ)</code></strong></li>
+            </ul>
+            <h3>Quando Usar a Lei dos Cossenos?</h3>
+            <ul>
+                <li>Quando conhecemos dois lados e o ângulo entre eles, e queremos calcular o terceiro lado.</li>
+                <li>Quando conhecemos os três lados do triângulo e queremos determinar um de seus ângulos.</li>
+            </ul>
+            <h3>Exemplo 1: Encontrando um lado desconhecido</h3>
+            <p>Dado um triângulo com lados <em>b</em> = 7, <em>c</em> = 10, e o ângulo <em>θ</em> = 60° entre eles, calcule o lado <em>a</em>.</p>
+            <p>Usando a fórmula:</p>
+            <p>
+                <code>a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2 · b · c · cos(θ)</code><br>
+                <code>a<sup>2</sup> = 7<sup>2</sup> + 10<sup>2</sup> - 2 · 7 · 10 · cos(60°)</code><br>
+                <code>a<sup>2</sup> = 49 + 100 - 2 · 7 · 10 · 0,5</code><br>
+                <code>a<sup>2</sup> = 149 - 70</code><br>
+                <code>a<sup>2</sup> = 79</code><br>
+                <code>a = √79 ≈ 8,89</code>
+            </p>
+            <p>Portanto, o lado <em>a</em> mede aproximadamente 8,89 unidades.</p>
+            <h3>Exemplo 2: Encontrando um ângulo desconhecido</h3>
+            <p>Dado um triângulo com lados <em>a</em> = 8, <em>b</em> = 6 e <em>c</em> = 10, calcule o ângulo <em>θ</em> oposto ao lado <em>a</em>.</p>
+            <p>Rearranjando a fórmula:</p>
+            <p>
+                <code>cos(θ) = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>) / (2 · b · c)</code><br>
+                <code>cos(θ) = (6<sup>2</sup> + 10<sup>2</sup> - 8<sup>2</sup>) / (2 · 6 · 10)</code><br>
+                <code>cos(θ) = (36 + 100 - 64) / 120</code><br>
+                <code>cos(θ) = 72 / 120</code><br>
+                <code>cos(θ) = 0,6</code>
+            </p>
+            <p>Calculando o ângulo:</p>
+            <p><code>θ = cos<sup>-1</sup>(0,6) ≈ 53,13°</code></p>
+            <p>Portanto, o ângulo <em>θ</em> mede aproximadamente 53,13°.</p>
+            <h3>Importância da Lei dos Cossenos</h3>
+            <p>Essa lei é essencial na resolução de problemas de trigonometria e geometria, sendo amplamente utilizada em áreas como engenharia, arquitetura, física e navegação.</p>
+        </div>
+
+        <div class="box">
+            <h2>Lei dos Senos</h2>
+            <p>A <strong>Lei dos Senos</strong> relaciona os lados de um triângulo com os senos de seus ângulos opostos. Essa lei é especialmente útil para resolver triângulos oblíquos (aqueles que não possuem ângulo reto).</p>
+            <h3>Fórmula Geral:</h3>
+            <p>Em um triângulo qualquer, com lados <em>a</em>, <em>b</em>, e <em>c</em>, opostos aos ângulos <em>A</em>, <em>B</em>, e <em>C</em>, respectivamente:</p>
+            <p><strong><code>a / sen(A) = b / sen(B) = c / sen(C)</code></strong></p>
+            <p>Se o triângulo estiver inscrito em uma circunferência (com os vértices tocando a circunferência), essa relação também é igual a 2 vezes o raio da circunferência:</p>
+            <p><strong><code>a / sen(A) = b / sen(B) = c / sen(C) = 2R</code></strong></p>
+            <p>Onde <em>R</em> é o raio da circunferência circunscrita ao triângulo.</p>
+            <h3>Quando Usar a Lei dos Senos?</h3>
+            <ul>
+                <li>Para calcular lados ou ângulos de um triângulo quando conhecemos:
+                    <ul>
+                        <li>Dois ângulos e um lado (caso Ângulo-Lado-Ângulo - ALA).</li>
+                        <li>Dois lados e um ângulo oposto a um deles (caso Lado-Ângulo-Lado - LAL).</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Exemplo 1: Encontrando um lado desconhecido</h3>
+            <p>Considere um triângulo com ângulos <em>A</em> = 40°, <em>B</em> = 60°, e o lado <em>a</em> = 10. Encontre o lado <em>b</em>.</p>
+            <p>Usando a fórmula da Lei dos Senos:</p>
+            <p>
+                <code>a / sen(A) = b / sen(B)</code><br>
+                <code>10 / sen(40°) = b / sen(60°)</code><br>
+                <code>b = (10 · sen(60°)) / sen(40°)</code>
+            </p>
+            <p>Calculando os valores:</p>
+            <p>
+                <code>sen(40°) ≈ 0,6428</code><br>
+                <code>sen(60°) ≈ 0,8660</code><br>
+                <code>b = (10 · 0,8660) / 0,6428 ≈ 13,47</code>
+            </p>
+            <p>Portanto, o lado <em>b</em> mede aproximadamente 13,47 unidades.</p>
+            <h3>Exemplo 2: Encontrando o raio da circunferência circunscrita</h3>
+            <p>Para um triângulo com lado <em>a</em> = 8 e ângulo oposto <em>A</em> = 30°, determine o raio <em>R</em>.</p>
+            <p>Usando a fórmula da circunferência:</p>
+            <p>
+                <code>a / sen(A) = 2R</code><br>
+                <code>8 / sen(30°) = 2R</code><br>
+                <code>8 / 0,5 = 2R</code><br>
+                <code>R = 8 / 1 = 4</code>
+            </p>
+            <p>Portanto, o raio da circunferência circunscrita é 4 unidades.</p>
+            <h3>Importância da Lei dos Senos</h3>
+            <p>A Lei dos Senos é amplamente utilizada na resolução de triângulos na trigonometria, navegação, astronomia e engenharia, facilitando cálculos em situações onde o triângulo não é retângulo.</p>
+        </div>
+        
+    </div>
+</body>
+</html>
